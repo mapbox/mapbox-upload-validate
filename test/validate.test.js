@@ -5,6 +5,8 @@ var expected = require('./expected');
 var queue = require('queue-async');
 var testUtils = require('./util');
 
+process.env.MapboxAPIMaps = 'https://api.tiles.mapbox.com';
+
 var validFiletypes = Object.keys(fixtures.valid);
 var validProtocols = validFiletypes.map(function(k) {
   if (k === 'mbtiles') return 'mbtiles:';

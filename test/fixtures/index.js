@@ -15,6 +15,17 @@ module.exports = {
   },
   invalid: {
     'unsupported': path.join(__dirname, 'invalid.unsupported.txt'),
-    'tilejson': path.join(__dirname, 'invalid.tilejson')
+    'tilejson': path.join(__dirname, 'invalid.tilejson'),
+    'tm2z': {
+      'doublezip': path.join(__dirname, 'invalid.tm2z-doublezip.tm2z'),
+      'empty': path.join(__dirname, 'invalid.tm2z-empty.tm2z'),
+      'filesize': path.join(__dirname, 'invalid.tm2z-filesize.tm2z'),
+      'gunzipsize': path.join(__dirname, 'invalid.tm2z-gunzipsize.tm2z'),
+      'malformed': path.join(__dirname, 'invalid.tm2z-malformed.tm2z'),
+      'missingfont': path.join(__dirname, 'invalid.tm2z-missing-font.tm2z'),
+      'missingimage': path.join(__dirname, 'invalid.tm2z-missing-image.tm2z'),
+      'nodirectory': path.join(__dirname, 'invalid.tm2z-nodirectory.tm2z'),
+      'xmlsize': path.join(__dirname, 'invalid.tm2z-xmlsize.tm2z')
+    }
   }
 };

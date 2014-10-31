@@ -31,7 +31,8 @@
     "tilejson": "^0.10.0",
     "tilelive": "5.2.x",
     "tilelive-omnivore": "0.0.3",
-    "tilelive-vector": "^3.0.0"
+    "tilelive-vector": "^3.0.0",
+    "underscore": "^1.7.0"
   },
   "devDependencies": {
     "mapnik-test-data": "http://mapbox-npm.s3.amazonaws.com/package/mapnik-test-data-2.0.3-fece0a9c546074a1479e9eae2333184029bb2279.tgz",
