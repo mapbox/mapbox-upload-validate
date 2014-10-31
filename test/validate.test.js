@@ -3,6 +3,7 @@ var validate = require('../lib/validate');
 var fixtures = require('./fixtures');
 var expected = require('./expected');
 var queue = require('queue-async');
+var testUtils = require('./util');
 
 var validFiletypes = Object.keys(fixtures.valid);
 var validProtocols = validFiletypes.map(function(k) {
@@ -66,6 +67,7 @@ test('lib.validate.info: valid', function(t) {
   });
   q.awaitAll(function(err, infos) {
     t.ifError(err, 'does not error on valid files');
+    infos = infos.map(testUtils.infoTruncator);
     t.deepEqual(infos, expectedInfos, 'expected info returned');
     t.end();
   });
