@@ -1,7 +1,10 @@
 language: node_js
 node_js:
-  - 0.10
+- 0.1
 before_install:
-  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-  - sudo apt-get update -q
-  - sudo apt-get install -y libstdc++6
+- sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+- sudo apt-get update -q
+- sudo apt-get install -y libstdc++6
+env:
+  global:
+    secure: UralxMZplpWSGkfQBSrqn3BQp65gxu5N6QtRnAB7WuwDeKUQ3valiu1GxTbqJ7MTOnmWRkZfPGHX/zfeFKWFdRs0o6RlwdRNyhvaBC3WPynkE8HJIwoDq2F50mq+q8oH5IG/gq8cjVz+WnmqlcZbNU39jul5xohuM4378wWbufk=
