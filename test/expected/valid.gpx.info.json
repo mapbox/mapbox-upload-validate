@@ -1,0 +1,82 @@
+{
+  "0": {
+    "id": "waypoints",
+    "description": "",
+    "minzoom": 0,
+    "maxzoom": 22,
+    "fields": {
+      "name": "String",
+      "cmt": "String",
+      "desc": "String",
+      "src": "String",
+      "link1_href": "String",
+      "link1_text": "String",
+      "link1_type": "String",
+      "link2_href": "String",
+      "link2_text": "String",
+      "link2_type": "String",
+      "number": "Number",
+      "type": "String"
+    }
+  },
+  "1": {
+    "id": "routes",
+    "description": "",
+    "minzoom": 0,
+    "maxzoom": 22,
+    "fields": {
+      "name": "String",
+      "cmt": "String",
+      "desc": "String",
+      "src": "String",
+      "link1_href": "String",
+      "link1_text": "String",
+      "link1_type": "String",
+      "link2_href": "String",
+      "link2_text": "String",
+      "link2_type": "String",
+      "number": "Number",
+      "type": "String"
+    }
+  },
+  "2": {
+    "id": "route_points",
+    "description": "",
+    "minzoom": 0,
+    "maxzoom": 22,
+    "fields": {
+      "name": "String",
+      "cmt": "String",
+      "desc": "String",
+      "src": "String",
+      "link1_href": "String",
+      "link1_text": "String",
+      "link1_type": "String",
+      "link2_href": "String",
+      "link2_text": "String",
+      "link2_type": "String",
+      "number": "Number",
+      "type": "String"
+    }
+  },
+  "bounds": [
+    -71.122845,
+    42.43095,
+    -71.105116,
+    42.467110000000005
+  ],
+  "center": [
+    -71.1139805,
+    42.44903000000001,
+    0
+  ],
+  "format": "pbf",
+  "maxzoom": 16,
+  "minzoom": 0,
+  "id": null,
+  "name": "",
+  "description": "",
+  "version": "1.0.0",
+  "legend": null,
+  "scheme": "xyz"
+}

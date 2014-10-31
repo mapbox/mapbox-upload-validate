@@ -1,0 +1,25 @@
+{
+  "attribution": "Map data © OpenStreetMap contributors",
+  "bounds": [
+    -180,
+    -85.0511,
+    180,
+    85.0511
+  ],
+  "center": [
+    8.7890625,
+    33.65120829920497,
+    3
+  ],
+  "format": "png8:m=h",
+  "maxzoom": 22,
+  "minzoom": 0,
+  "scale": "1",
+  "source": "mapbox:///mapbox.mapbox-streets-v3",
+  "id": null,
+  "name": "",
+  "description": "",
+  "version": "1.0.0",
+  "legend": null,
+  "scheme": "xyz"
+}

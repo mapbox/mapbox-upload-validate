@@ -1,0 +1,41 @@
+{
+  "0": {
+    "id": "valid.shapefile",
+    "description": "",
+    "minzoom": 0,
+    "maxzoom": 22,
+    "fields": {
+      "FIPS": "String",
+      "ISO2": "String",
+      "ISO3": "String",
+      "UN": "Number",
+      "NAME": "String",
+      "AREA": "Number",
+      "POP2005": "Number",
+      "REGION": "Number",
+      "SUBREGION": "Number",
+      "LON": "Number",
+      "LAT": "Number"
+    }
+  },
+  "bounds": [
+    -180,
+    -59.47306100000001,
+    180,
+    83.57026863098147
+  ],
+  "center": [
+    0,
+    12.048603815490733,
+    0
+  ],
+  "format": "pbf",
+  "maxzoom": 5,
+  "minzoom": 0,
+  "id": null,
+  "name": "",
+  "description": "",
+  "version": "1.0.0",
+  "legend": null,
+  "scheme": "xyz"
+}

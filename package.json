@@ -1,0 +1,39 @@
+{
+  "name": "mapbox-upload-validate",
+  "version": "0.0.0",
+  "description": "Validate that a file can be uploaded to Mapbox",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "bin": {
+    "mapbox-upload-validate": "bin/mapbox-upload-validate.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mapbox/mapbox-upload-validate"
+  },
+  "author": "Mapbox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mapbox/mapbox-upload-validate/issues"
+  },
+  "homepage": "https://github.com/mapbox/mapbox-upload-validate",
+  "dependencies": {
+    "mapbox-file-sniff": "0.0.5",
+    "mapbox-studio-default-fonts": "https://mapbox-npm.s3.amazonaws.com/package/mapbox-studio-default-fonts-0.0.4-4afb5235f457bd1c1a5a70fce6c2aa83bf7a851e.tgz",
+    "mapnik": "^3.0.5",
+    "mbtiles": "^0.7.1",
+    "queue-async": "^1.0.7",
+    "split": "^0.3.0",
+    "step": "0.0.5",
+    "tilejson": "^0.10.0",
+    "tilelive": "5.2.x",
+    "tilelive-omnivore": "0.0.3",
+    "tilelive-vector": "^3.0.0"
+  },
+  "devDependencies": {
+    "mapnik-test-data": "http://mapbox-npm.s3.amazonaws.com/package/mapnik-test-data-2.0.3-fece0a9c546074a1479e9eae2333184029bb2279.tgz",
+    "tape": "^3.0.1"
+  }
+}

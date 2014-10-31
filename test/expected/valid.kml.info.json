@@ -1,0 +1,82 @@
+{
+  "0": {
+    "id": "Magnitude_6",
+    "description": "",
+    "minzoom": 0,
+    "maxzoom": 22,
+    "fields": {
+      "Name": "String",
+      "Description": "String"
+    }
+  },
+  "1": {
+    "id": "Magnitude_5",
+    "description": "",
+    "minzoom": 0,
+    "maxzoom": 22,
+    "fields": {
+      "Name": "String",
+      "Description": "String"
+    }
+  },
+  "2": {
+    "id": "Magnitude_4",
+    "description": "",
+    "minzoom": 0,
+    "maxzoom": 22,
+    "fields": {
+      "Name": "String",
+      "Description": "String"
+    }
+  },
+  "3": {
+    "id": "Magnitude_3",
+    "description": "",
+    "minzoom": 0,
+    "maxzoom": 22,
+    "fields": {
+      "Name": "String",
+      "Description": "String"
+    }
+  },
+  "4": {
+    "id": "Magnitude_2",
+    "description": "",
+    "minzoom": 0,
+    "maxzoom": 22,
+    "fields": {
+      "Name": "String",
+      "Description": "String"
+    }
+  },
+  "5": {
+    "id": "Magnitude_1",
+    "description": "",
+    "minzoom": 0,
+    "maxzoom": 22,
+    "fields": {
+      "Name": "String",
+      "Description": "String"
+    }
+  },
+  "bounds": [
+    -155.8387,
+    17.7682,
+    -64.4278,
+    67.3132
+  ],
+  "center": [
+    -110.13325,
+    42.5407,
+    1
+  ],
+  "format": "pbf",
+  "maxzoom": 8,
+  "minzoom": 1,
+  "id": null,
+  "name": "",
+  "description": "",
+  "version": "1.0.0",
+  "legend": null,
+  "scheme": "xyz"
+}
