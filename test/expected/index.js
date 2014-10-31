@@ -20,6 +20,11 @@ module.exports = {
     'missingfont': 'Failed to find font face \'This Is A Missing Font\' in style \'country_label\' in TextSymbolizer',
     'missingimage': 'file could not be found: \'invalid.tm2z-missing-image.tm2z/img/ice.jpg\' in style \'water\' in PolygonPatternSymbolizer',
     'nodirectory': 'EISDIR, open \'invalid.tm2z-nodirectory.tm2z/\'',
-    'xmlsize': 'Unzipped project.xml size should not exceed 750KB.'
+    'xmlsize': 'Unzipped project.xml size should not exceed 750KB.',
+    'metadatasize': 'Metadata exceeds limit of 0.0k.',
+    'maxdrawtime': 'At least one tile exceeds the draw time limit of 1ms. Please optimize your styles.',
+    'avgdrawtime': 'The average tile draw time exceeds the limit of 1ms. Please optimize your styles.',
+    'maximgbytes': 'At least one rendered tile exceeds the file size limit of 0.0k. Try lowering the number of PNG colors or JPEG quality in your project settings.',
+    'avgimgbytes': 'The average rendered tile exceeds the file size limit of 0.0k. Try lowering the number of PNG colors or JPEG quality in your project settings.'
   }
 };
