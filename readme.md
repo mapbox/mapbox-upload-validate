@@ -46,9 +46,3 @@ Then
 ```
 npm test
 ```
-
-## Gotchas
-- Do we need an env var for `MapboxAPIMaps` endpoint?
-- tilelive in package.json needs to match version with that of tilelive-vector
-- studio-pro, tm2-private fonts
-- parsing entire serialtiles file to find info: worth it?
