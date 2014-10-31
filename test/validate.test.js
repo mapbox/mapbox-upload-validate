@@ -88,3 +88,38 @@ test('lib.validate.info: invalid data in the file', function(t) {
     t.end();
   });
 });
+
+test('lib.validate.source: valid', function(t) {
+  var q = queue();
+  validFiletypes.forEach(function(k, i) {
+    q.defer(validate.source, validProtocols[i] + '//' + fixtures.valid[k]);
+  });
+  q.awaitAll(function(err, sources) {
+    t.ifError(err, 'does not error on valid files');
+    valid = sources.reduce(function(memo, source) {
+      if (typeof source.getInfo !== 'function') memo = false;
+      if (typeof source.getTile !== 'function') memo = false;
+      return memo;
+    }, true);
+    t.ok(valid, 'sources appear valid');
+    t.end();
+  });
+});
+
+test('lib.validate.source: unsupported file', function(t) {
+  validate.info('nonsense://' + fixtures.invalid.unsupported, function(err, source) {
+    t.ok(err, 'expected error');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    t.notOk(source, 'no source returned');
+    t.end();
+  });
+});
+
+test('lib.validate.source: invalid data in the file', function(t) {
+  validate.info('tilejson://' + fixtures.invalid.tilejson, function(err, source) {
+    t.ok(err, 'expected error');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    t.notOk(source, 'no source returned');
+    t.end();
+  });
+});

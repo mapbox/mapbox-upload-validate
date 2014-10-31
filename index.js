@@ -28,7 +28,7 @@ module.exports = function(filepath, callback) {
     function(err, source) {
       if (err) return fail(err);
       results.source = source;
-      validate[results.protocol.slice(0,-1)](something, this);
+      validate[results.protocol.slice(0,-1)](results, this);
     },
     function(err) {
       if (err) return fail(err);
