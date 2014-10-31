@@ -38,7 +38,6 @@ The following types of files are supported for upload to Mapbox.com:
 ## Run tests
 
 Setup your environment with some variables:
-- `MapboxAPIMaps`: url for mapbox tile api
 - `MapboxAccessToken`: for access to mapbox.com
 
 Then
