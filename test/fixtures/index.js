@@ -3,10 +3,10 @@ var datapath = path.dirname(require.resolve('mapnik-test-data'));
 
 module.exports = {
   valid: {
+    // 'zip': path.join(__dirname, 'valid.shapefile.zip'),
     'geojson': path.join(datapath, 'data/geojson/DC_polygon.geo.json'),
     'gpx': path.join(datapath, 'data/gpx/fells_loop.gpx'),
     'kml': path.join(datapath, 'data/kml/1week_earthquake.kml'),
-    // 'zip': path.join(__dirname, 'valid.shapefile.zip'),
     'shp': path.join(__dirname, 'valid.shapefile', 'valid.shapefile.shp'),
     'tif': path.join(datapath, 'data/geotiff/sample.tif'),
     'tilejson': path.join(__dirname, 'valid.tilejson'),
@@ -15,7 +15,10 @@ module.exports = {
   },
   invalid: {
     'unsupported': path.join(__dirname, 'invalid.unsupported.txt'),
-    'tilejson': path.join(__dirname, 'invalid.tilejson'),
+    'tilejson': {
+      'bounds': path.join(__dirname, 'invalid.tilejson-bounds.tilejson'),
+      'hostname': path.join(__dirname, 'invalid.tilejson-hostname.tilejson')
+    },
     'tm2z': {
       'doublezip': path.join(__dirname, 'invalid.tm2z-doublezip.tm2z'),
       'empty': path.join(__dirname, 'invalid.tm2z-empty.tm2z'),

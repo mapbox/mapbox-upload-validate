@@ -85,7 +85,7 @@ test('lib.validate.info: unsupported file', function(t) {
 });
 
 test('lib.validate.info: invalid data in the file', function(t) {
-  validate.info('tilejson://' + fixtures.invalid.tilejson, function(err, info) {
+  validate.info('tilejson://' + fixtures.invalid.tilejson.bounds, function(err, info) {
     t.ok(err, 'expected error');
     t.equal(err.code, 'EINVALID', 'expected error code');
     t.notOk(info, 'no info returned');
@@ -120,7 +120,7 @@ test('lib.validate.source: unsupported file', function(t) {
 });
 
 test('lib.validate.source: invalid data in the file', function(t) {
-  validate.info('tilejson://' + fixtures.invalid.tilejson, function(err, source) {
+  validate.info('tilejson://' + fixtures.invalid.tilejson.bounds, function(err, source) {
     t.ok(err, 'expected error');
     t.equal(err.code, 'EINVALID', 'expected error code');
     t.notOk(source, 'no source returned');

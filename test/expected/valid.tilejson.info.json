@@ -1,24 +1,25 @@
 {
   "tilejson": "1.0.0",
-  "name": "OpenStreetMap",
-  "description": "A free editable map of the whole world.",
-  "version": "1.0.0",
-  "attribution": "(c) OpenStreetMap contributors, CC-BY-SA",
+  "name": "Bright TileJSON",
   "scheme": "xyz",
   "tiles": [
-    "http://a.tile.openstreetmap.org/${z}/${x}/${y}.png",
-    "http://b.tile.openstreetmap.org/${z}/${x}/${y}.png",
-    "http://c.tile.openstreetmap.org/${z}/${x}/${y}.png"
+    "http://mapbox-staff.s3.amazonaws.com/datquest/new/{z}/{x}/{y}.vector.pbf"
   ],
   "minzoom": 0,
-  "maxzoom": 18,
+  "maxzoom": 6,
   "bounds": [
     -180,
     -85,
     180,
     85
   ],
+  "center": [
+    0,
+    0,
+    3
+  ],
   "id": "valid",
-  "legend": null,
-  "center": null
+  "description": "",
+  "version": "1.0.0",
+  "legend": null
 }
