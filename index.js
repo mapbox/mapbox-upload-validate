@@ -16,6 +16,7 @@ module.exports = function(filepath, callback) {
     },
     function(err, protocol) {
       if (err) return fail(err);
+      results.filepath = filepath;
       results.protocol = protocol;
       results.uri = protocol + '//' + filepath;
       validate.info(results.uri, this);

@@ -31,5 +31,9 @@ module.exports = {
     'metadatasize': 'Metadata exceeds limit of 0.0k.',
     'bounds': 'bounds must be an array of the form [west, south, east, north]',
     'hostname': 'Invalid hostname in TileJSON'
+  },
+  serialtileErrors: {
+    'tilesize': 'Tile exceeds maximum size of 1k at z1. Reduce the detail of data at this zoom level or omit it by adjusting your minzoom.',
+    'noinfo': 'Missing Info object'
   }
 };

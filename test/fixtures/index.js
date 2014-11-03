@@ -29,6 +29,9 @@ module.exports = {
       'missingimage': path.join(__dirname, 'invalid.tm2z-missing-image.tm2z'),
       'nodirectory': path.join(__dirname, 'invalid.tm2z-nodirectory.tm2z'),
       'xmlsize': path.join(__dirname, 'invalid.tm2z-xmlsize.tm2z')
+    },
+    'serialtiles': {
+      'noinfo': path.join(__dirname, 'invalid.serialtiles.noinfo.gz')
     }
   }
 };
