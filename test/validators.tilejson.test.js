@@ -54,12 +54,3 @@ test('lib.validators.tilejson: valid', function(t) {
     t.end();
   });
 });
-
-test('lib.validators.tilejson: invalid metadata size', function(t) {
-  validate(fixtures.valid.tilejson, { max_metadata: 50 }, function(err) {
-    t.ok(err, 'expected error');
-    t.equal(err.code, 'EINVALID', 'expected error code');
-    t.equal(err.message, expected.tilejsonErrors.metadatasize, 'expected error message');
-    t.end();
-  });
-});

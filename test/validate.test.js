@@ -20,24 +20,6 @@ var validProtocols = validFiletypes.map(function(k) {
   if (k === 'serialtiles') return 'serialtiles:';
 });
 
-test('lib.validate.fail', function(t) {
-  var msg = 'some error message';
-  var err = validate.fail(msg);
-  t.ok(err instanceof Error, 'returns an error');
-  t.equal(err.message, msg, 'returns expected error message');
-  t.equal(err.code, 'EINVALID', 'returns expected error code');
-
-  msg = new Error(msg);
-  msg.stack = 'stack trace';
-  err = validate.fail(msg);
-  t.ok(err instanceof Error, 'returns an error');
-  t.equal(err.message, msg.message, 'returns expected error message');
-  t.equal(err.code, 'EINVALID', 'returns expected error code');
-  t.equal(err.stack, msg.stack, 'returns stack trace');
-
-  t.end();
-});
-
 test('lib.validate.filepath: valid', function(t) {
   var q = queue();
   validFiletypes.forEach(function(k) {
@@ -89,6 +71,15 @@ test('lib.validate.info: invalid data in the file', function(t) {
     t.ok(err, 'expected error');
     t.equal(err.code, 'EINVALID', 'expected error code');
     t.notOk(info, 'no info returned');
+    t.end();
+  });
+});
+
+test('lib.validate.info: invalid metadata size', function(t) {
+  validate.info('tilejson://' + fixtures.valid.tilejson, { max_metadata: 50 }, function(err) {
+    t.ok(err, 'expected error');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    t.equal(err.message, 'Metadata exceeds limit of 0.0k.', 'expected error message');
     t.end();
   });
 });

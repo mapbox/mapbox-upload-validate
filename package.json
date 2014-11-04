@@ -32,6 +32,7 @@
     "tilelive": "5.2.x",
     "tilelive-omnivore": "0.0.3",
     "tilelive-vector": "^3.0.0",
+    "tiletype": "^0.1.0",
     "underscore": "^1.7.0"
   },
   "devDependencies": {
