@@ -35,5 +35,13 @@ module.exports = {
   serialtileErrors: {
     'tilesize': 'Tile exceeds maximum size of 1k at z1. Reduce the detail of data at this zoom level or omit it by adjusting your minzoom.',
     'noinfo': 'Missing Info object'
+  },
+  omnivoreErrors: {
+    'shpfilesize': 'File is larger than 1024 bytes. Too big to process.',
+    'tiffilesize': 'File is larger than 1024 bytes. Too big to process.',
+    'bad-projection': 'Invalid projection file.',
+    'scrambled-files': 'Unknown filetype.',
+    'bad-bounds': 'bounds east value must be between -180 and 180',
+    'bad-tif': 'Unknown filetype.'
   }
 };

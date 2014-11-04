@@ -32,6 +32,12 @@ module.exports = {
     },
     'serialtiles': {
       'noinfo': path.join(__dirname, 'invalid.serialtiles.noinfo.gz')
+    },
+    'omnivore': {
+      'bad-projection': path.join(__dirname, 'invalid.omnivore.bad-projection', 'invalid.omnivore.bad-projection.shp'),
+      'scrambled-files': path.join(__dirname, 'invalid.omnivore.scrambled-files', 'missing_type.shp'),
+      'bad-bounds': path.join(__dirname, 'invalid.omnivore.geojson-bounds.json'),
+      'bad-tif': path.join(__dirname, 'invalid.omnivore.tif')
     }
   }
 };

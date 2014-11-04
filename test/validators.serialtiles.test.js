@@ -9,7 +9,7 @@ process.env.MapboxAPIMaps = 'https://api.tiles.mapbox.com';
 
 function validate(filepath, maxSize, callback) {
   if (!callback) {
-    callback = limits;
+    callback = maxSize;
     maxSize = null;
   }
 
@@ -22,7 +22,7 @@ function validate(filepath, maxSize, callback) {
       info: expected.info.tilejson,
       source: source
     };
-    if (maxSize) opts.max_tilesize = maxSize;
+    if (maxSize) opts.limits = { max_tilesize: maxSize };
     serialtiles(opts, callback);
   });
 }
