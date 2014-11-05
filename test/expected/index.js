@@ -41,7 +41,7 @@ module.exports = {
     'bounds': 'bounds must be an array of the form [west, south, east, north]',
     'hostname': 'Invalid hostname in TileJSON'
   },
-  serialtileErrors: {
+  serialtilesErrors: {
     'tilesize': 'Tile exceeds maximum size of 1k at z1. Reduce the detail of data at this zoom level or omit it by adjusting your minzoom.',
     'noinfo': 'Missing Info object'
   },
@@ -63,5 +63,6 @@ module.exports = {
     'limits': 'Tileset exceeds processing limit.',
     'tiletoobig': 'Tile exceeds maximum size of 0k at z1. Reduce the detail of data at this zoom level or omit it by adjusting your minzoom.',
     'gridtoobig': 'Grid exceeds maximum size of 0k at z1. Reduce the detail of data at this zoom level or omit it by adjusting your minzoom.'
-  }
+  },
+  unsupportedErrors: 'Unknown filetype.'
 };

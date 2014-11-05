@@ -13,7 +13,7 @@ test('full serialtiles validation: invalid', function(t) {
       validate(fixtures.invalid.serialtiles[k], function(err, valid, message) {
         t.ifError(err, 'no error');
         t.notOk(valid, 'is not valid');
-        t.equal(message, expected.serialtileErrors[k], 'expected message');
+        t.equal(message, expected.serialtilesErrors[k], 'expected message');
         callback();
       });
     });

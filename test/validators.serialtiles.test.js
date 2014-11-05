@@ -32,7 +32,7 @@ test('lib.validators.serialtiles: tile too big', function(t) {
   validate(fixtures.valid.serialtiles, 1024, function(err) {
     t.ok(err, 'expected error');
     t.equal(err.code, 'EINVALID', 'expected error code');
-    t.equal(err.message, expected.serialtileErrors.tilesize, 'expected error message');
+    t.equal(err.message, expected.serialtilesErrors.tilesize, 'expected error message');
   });
 });
 

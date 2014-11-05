@@ -10,3 +10,4 @@ require('./full.validation.tilejson');
 require('./full.validation.serialtiles');
 require('./full.validation.omnivore');
 require('./full.validation.mbtiles');
+require('./shell.script.test.js');
