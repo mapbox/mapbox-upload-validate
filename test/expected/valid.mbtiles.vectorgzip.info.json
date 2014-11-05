@@ -1,0 +1,43 @@
+{
+  "scheme": "tms",
+  "basename": "valid-vectorgzip.mbtiles",
+  "id": "valid-vectorgzip",
+  "filesize": 75776,
+  "center": [
+    -32.34375,
+    80.983688,
+    0
+  ],
+  "description": "Source with pbf+gzip",
+  "format": "pbf",
+  "maxzoom": 0,
+  "minzoom": 0,
+  "name": "gzip",
+  "vector_layers": [
+    {
+      "id": "world_merc",
+      "description": "",
+      "fields": {
+        "FIPS": "String",
+        "ISO2": "String",
+        "ISO3": "String",
+        "UN": "Number",
+        "NAME": "String",
+        "AREA": "Number",
+        "POP2005": "Number",
+        "REGION": "Number",
+        "SUBREGION": "Number",
+        "LON": "Number",
+        "LAT": "Number"
+      }
+    }
+  ],
+  "bounds": [
+    -180,
+    -85.051129,
+    180,
+    85.051128
+  ],
+  "version": "1.0.0",
+  "legend": null
+}

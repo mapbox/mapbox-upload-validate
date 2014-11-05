@@ -1,0 +1,42 @@
+{
+  "scheme": "tms",
+  "basename": "valid-carmen2.mbtiles",
+  "id": "valid-carmen2",
+  "filesize": 225280,
+  "center": [
+    0,
+    0,
+    1
+  ],
+  "format": "pbf",
+  "geocoder_layer": "data._text",
+  "geocoder_resolution": "0",
+  "maxzoom": 1,
+  "minzoom": 0,
+  "name": "ne-country",
+  "vector_layers": [
+    {
+      "id": "data",
+      "description": "",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "fields": {
+        "_id": "Number",
+        "_text": "String",
+        "_center": "String",
+        "title": "String",
+        "iso2": "String",
+        "population": "Number"
+      }
+    }
+  ],
+  "bounds": [
+    -180,
+    -85.051129,
+    180,
+    85.051128
+  ],
+  "description": "",
+  "version": "1.0.0",
+  "legend": null
+}

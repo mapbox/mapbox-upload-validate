@@ -11,7 +11,16 @@ module.exports = {
     'tif': path.join(datapath, 'data/geotiff/sample.tif'),
     'tilejson': path.join(__dirname, 'valid.tilejson'),
     'tm2z': path.join(__dirname, 'valid.tm2z'),
-    'serialtiles': path.join(__dirname, 'valid.serialtiles.gz')
+    'serialtiles': path.join(__dirname, 'valid.serialtiles.gz'),
+    'mbtiles-carmen2': path.join(__dirname, 'valid-carmen2.mbtiles'),
+    'mbtiles-onlygrids': path.join(__dirname, 'valid-onlygrids.mbtiles'),
+    'mbtiles-onlytiles': path.join(__dirname, 'valid-onlytiles.mbtiles'),
+    'mbtiles-tilesgrids': path.join(__dirname, 'valid-tilesgrid.mbtiles'),
+    'mbtiles-update1': path.join(__dirname, 'valid-update1.mbtiles'),
+    'mbtiles-update2': path.join(__dirname, 'valid-update2.mbtiles'),
+    'mbtiles-vector': path.join(__dirname, 'valid-vector.mbtiles'),
+    'mbtiles-vectorgzip': path.join(__dirname, 'valid-vectorgzip.mbtiles'),
+    'mbtiles-webp': path.join(__dirname, 'valid-webp.mbtiles')
   },
   invalid: {
     'unsupported': path.join(__dirname, 'invalid.unsupported.txt'),
@@ -38,6 +47,14 @@ module.exports = {
       'scrambled-files': path.join(__dirname, 'invalid.omnivore.scrambled-files', 'missing_type.shp'),
       'bad-bounds': path.join(__dirname, 'invalid.omnivore.geojson-bounds.json'),
       'bad-tif': path.join(__dirname, 'invalid.omnivore.tif')
+    },
+    'mbtiles': {
+      'oldtemplate': path.join(__dirname, 'invalid.mbtiles-template.mbtiles'),
+      'notadb': path.join(__dirname, 'invalid.mbtiles-notadb.mbtiles'),
+      'vector': path.join(__dirname, 'invalid.mbtiles-vector.mbtiles'),
+      'oldcarmen': path.join(__dirname, 'invalid.mbtiles-oldcarmen.mbtiles'),
+      'empty': path.join(__dirname, 'invalid.mbtiles-empty.mbtiles'),
+      'limits': path.join(__dirname, 'invalid.mbtiles-limits.mbtiles')
     }
   }
 };

@@ -1,0 +1,34 @@
+{
+  "scheme": "tms",
+  "basename": "valid-webp.mbtiles",
+  "id": "valid-webp",
+  "filesize": 82944,
+  "attribution": "Natural Earth",
+  "center": [
+    0,
+    0,
+    0
+  ],
+  "description": "WEBP 1024x1024 raster tiles",
+  "format": "pbf",
+  "maxzoom": 0,
+  "minzoom": 0,
+  "name": "WEBP",
+  "bounds": [
+    -180,
+    -85.0511,
+    180,
+    85.0511
+  ],
+  "vector_layers": [
+    {
+      "id": "data",
+      "description": "",
+      "fields": {
+        "nodata": "Number"
+      }
+    }
+  ],
+  "version": "1.0.0",
+  "legend": null
+}

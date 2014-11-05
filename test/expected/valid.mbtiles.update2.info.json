@@ -1,0 +1,25 @@
+{
+  "scheme": "tms",
+  "basename": "valid-update2.mbtiles",
+  "id": "valid-update2",
+  "filesize": 19456,
+  "bounds": [
+    -180,
+    -85.051129,
+    180,
+    85.051128
+  ],
+  "minzoom": 1,
+  "maxzoom": 1,
+  "name": "US Debt Held By Foreign Nations",
+  "description": "",
+  "template": "{{#__teaser__}}{{Country}}{{/__teaser__}}",
+  "spec": "1.2",
+  "version": "1.0.1",
+  "center": [
+    0,
+    0,
+    1
+  ],
+  "legend": null
+}

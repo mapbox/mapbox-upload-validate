@@ -1,9 +1,9 @@
 var validate = require('./lib/validate');
 var Step = require('step');
 
-var results = {};
-
 module.exports = function(filepath, callback) {
+  var results = {};
+  
   function fail(err) {
     err = err || new Error('Any unspecified error was encountered');
     if (err && err.code === 'EINVALID') return callback(null, false, err.message);

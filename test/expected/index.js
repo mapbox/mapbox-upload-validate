@@ -9,7 +9,16 @@ module.exports = {
     'tif': require('./valid.tif.info.json'),
     'tilejson': require('./valid.tilejson.info.json'),
     'tm2z': require('./valid.tm2z.info.json'),
-    'serialtiles': require('./valid.serialtiles.info.json')
+    'serialtiles': require('./valid.serialtiles.info.json'),
+    'mbtiles-carmen2': require('./valid.mbtiles.carmen2.info.json'),
+    'mbtiles-onlygrids': require('./valid.mbtiles.onlygrids.info.json'),
+    'mbtiles-onlytiles': require('./valid.mbtiles.onlytiles.info.json'),
+    'mbtiles-tilesgrids': require('./valid.mbtiles.tilesgrid.info.json'),
+    'mbtiles-update1': require('./valid.mbtiles.update1.info.json'),
+    'mbtiles-update2': require('./valid.mbtiles.update2.info.json'),
+    'mbtiles-vector': require('./valid.mbtiles.vector.info.json'),
+    'mbtiles-vectorgzip': require('./valid.mbtiles.vectorgzip.info.json'),
+    'mbtiles-webp': require('./valid.mbtiles.webp.info.json')
   },
   tm2zErrors: {
     'doublezip': 'Unknown filetype.',
@@ -43,5 +52,16 @@ module.exports = {
     'scrambled-files': 'Unknown filetype.',
     'bad-bounds': 'bounds east value must be between -180 and 180',
     'bad-tif': 'Unknown filetype.'
+  },
+  mbtilesErrors: {
+    'oldtemplate': 'Use TileMill 0.7 or later to export MBTiles with a valid template.',
+    'notadb': 'Unknown filetype.',
+    'corrupt': '',
+    'vector': 'Vector source must include "vector_layers" key',
+    'oldcarmen': 'Carmen 0.1.x tilesets are no longer supported.',
+    'empty': 'Tileset is empty.',
+    'limits': 'Tileset exceeds processing limit.',
+    'tiletoobig': 'Tile exceeds maximum size of 0k at z1. Reduce the detail of data at this zoom level or omit it by adjusting your minzoom.',
+    'gridtoobig': 'Grid exceeds maximum size of 0k at z1. Reduce the detail of data at this zoom level or omit it by adjusting your minzoom.'
   }
 };
