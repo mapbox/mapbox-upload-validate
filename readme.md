@@ -1,6 +1,4 @@
-# Work in progress
-
-That is to say, this doesn't work yet.
+[![Build Status](https://travis-ci.org/mapbox/mapbox-upload-validate.svg?branch=master)](https://travis-ci.org/mapbox/mapbox-upload-validate)
 
 # mapbox-upload-validate
 
