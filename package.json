@@ -29,9 +29,9 @@
     "split": "^0.3.0",
     "step": "0.0.5",
     "tilejson": "^0.10.0",
-    "tilelive": "5.2.x",
-    "tilelive-omnivore": "0.0.3",
-    "tilelive-vector": "^3.0.0",
+    "tilelive": "5.3.x",
+    "tilelive-omnivore": "0.0.4",
+    "tilelive-vector": "^3.0.1",
     "tiletype": "^0.1.0",
     "underscore": "^1.7.0"
   },
