@@ -11,3 +11,4 @@ require('./full.validation.serialtiles');
 require('./full.validation.omnivore');
 require('./full.validation.mbtiles');
 require('./shell.script.test.js');
+require('./duplicate_module.test.js');
