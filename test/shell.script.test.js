@@ -5,7 +5,6 @@ var expected = require('./expected');
 var path = require('path');
 var queue = require('queue-async');
 var _ = require('underscore');
-
 var run = path.resolve(__dirname, '../bin/mapbox-upload-validate.js');
 
 test('bin.mapbox-upload-validate: invalid', function(t) {
@@ -40,7 +39,6 @@ test('bin.mapbox-upload-validate: invalid', function(t) {
 test('bin.mapbox-upload-validate: valid', function(t) {
   var q = queue();
   Object.keys(fixtures.valid).forEach(function(k) {
-    if (k === 'gpx') return; // @TODO: https://github.com/mapnik/node-mapnik/issues/300
     q.defer(function(callback) {
       exec([run, fixtures.valid[k]].join(' '), function(err, stdout, stderr) {
         if (err) throw err;

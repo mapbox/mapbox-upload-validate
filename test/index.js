@@ -1,3 +1,4 @@
+require('./duplicate_module.test.js');
 require('./validate.test');
 require('./invalid.test');
 require('./validators.tm2z.test');

@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 
 var validate = require('..');
+var mapnik = require('mapnik');
+// silence logs
+mapnik.Logger.setSeverity(mapnik.Logger.NONE);
 
 process.env.MapboxAPIMaps = process.env.MapboxAPIMaps || 'https://api.tiles.mapbox.com';
 
