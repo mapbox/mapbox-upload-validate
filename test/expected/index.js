@@ -62,7 +62,8 @@ module.exports = {
     'empty': 'Tileset is empty.',
     'limits': 'Tileset exceeds processing limit.',
     'tiletoobig': 'Tile exceeds maximum size of 0k at z1. Reduce the detail of data at this zoom level or omit it by adjusting your minzoom.',
-    'gridtoobig': 'Grid exceeds maximum size of 0k at z1. Reduce the detail of data at this zoom level or omit it by adjusting your minzoom.'
+    'gridtoobig': 'Grid exceeds maximum size of 0k at z1. Reduce the detail of data at this zoom level or omit it by adjusting your minzoom.',
+    'nulltile': 'Tile is invalid'
   },
   unsupportedErrors: 'Unknown filetype.'
 };

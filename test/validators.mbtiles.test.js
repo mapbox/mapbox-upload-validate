@@ -79,6 +79,15 @@ test('lib.validators.mbtiles: too many tiles + grids', function(t) {
   });
 });
 
+test('lib.validators.mbtiles: null tile', function(t) {
+  validate(fixtures.invalid.mbtiles.nulltile, function(err) {
+    t.ok(err, 'expected error');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    t.equal(err.message, expected.mbtilesErrors.nulltile, 'expected error message');
+    t.end();
+  });
+});
+
 test('lib.validators.mbtiles: tile too big', function(t) {
   validate(fixtures.valid['mbtiles-onlytiles'], { max_tilesize: 500 }, function(err) {
     t.ok(err, 'expected error');

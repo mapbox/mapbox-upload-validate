@@ -54,7 +54,8 @@ module.exports = {
       'vector': path.join(__dirname, 'invalid.mbtiles-vector.mbtiles'),
       'oldcarmen': path.join(__dirname, 'invalid.mbtiles-oldcarmen.mbtiles'),
       'empty': path.join(__dirname, 'invalid.mbtiles-empty.mbtiles'),
-      'limits': path.join(__dirname, 'invalid.mbtiles-limits.mbtiles')
+      'limits': path.join(__dirname, 'invalid.mbtiles-limits.mbtiles'),
+      'nulltile': path.join(__dirname, 'invalid.mbtiles-null-tile.mbtiles')
     }
   }
 };
