@@ -21,7 +21,7 @@ Where `/path/to/data/file` is the path to a file.
 
 There are three possible results:
 - **Valid**: process exit 0 and logs the file's path to stdout
-- **Invalid**: process exit 0, nothing is logged to stdout, and a validation error is printed to stderr
+- **Invalid**: process exit 3, nothing is logged to stdout, and a validation error is printed to stderr
 - **Unexpected**: something unexpected happened and we could not confirm whether or not the file is valid. Process exit 1 with nothing printed to stdout and an error message printed to stderr
 
 The following types of files are supported for upload to Mapbox.com:
