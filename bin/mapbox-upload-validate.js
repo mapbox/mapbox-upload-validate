@@ -15,6 +15,10 @@ validate(filepath, function(err, valid, message) {
     process.exit(1);
   }
 
-  if (!valid) console.error(message);
-  else console.log(filepath);
+  if (!valid) {
+    console.error(message);
+    process.exit(3);
+  }
+
+  console.log(filepath);
 });

@@ -15,7 +15,7 @@ test('bin.mapbox-upload-validate: invalid', function(t) {
     }
 
     exec([run, filepath].join(' '), function(err, stdout, stderr) {
-      if (err) throw err;
+      t.equal(err.code, 3, 'exit 3');
       t.equal(stdout, '', [type, reason].join('.') + ': nothing logged to stdout');
       var expect = expected[type + 'Errors'];
       if (reason) expect = expect[reason];
