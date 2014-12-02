@@ -7,4 +7,4 @@ before_install:
 - sudo apt-get install -y libstdc++6
 env:
   global:
-    secure: UralxMZplpWSGkfQBSrqn3BQp65gxu5N6QtRnAB7WuwDeKUQ3valiu1GxTbqJ7MTOnmWRkZfPGHX/zfeFKWFdRs0o6RlwdRNyhvaBC3WPynkE8HJIwoDq2F50mq+q8oH5IG/gq8cjVz+WnmqlcZbNU39jul5xohuM4378wWbufk=
+    secure: C6IoK0qKopK5m7f0qx8nDkP44VzCnABwSgKV8bWGTDqfrXKWkk4Zi7XD9of4IQtL87ALP6zgSoJMzNshH39K5VXqb10yLf8KessQQhyIy+3iGPkVo0J4aEkLv8wvHpRqFlthJCMCjQivVkEB9Z7pTGy37zUZJ7RAk0op8TyvAUw=
