@@ -30,7 +30,7 @@
     "step": "0.0.5",
     "tilejson": "^0.10.0",
     "tilelive": "5.4.x",
-    "tilelive-omnivore": "0.0.4",
+    "tilelive-omnivore": "0.0.5",
     "tilelive-vector": "3.0.4",
     "tiletype": "0.1.0",
     "underscore": "^1.7.0"

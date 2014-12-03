@@ -1,23 +1,25 @@
 {
-  "0": {
-    "id": "valid.shapefile",
-    "description": "",
-    "minzoom": 0,
-    "maxzoom": 22,
-    "fields": {
-      "FIPS": "String",
-      "ISO2": "String",
-      "ISO3": "String",
-      "UN": "Number",
-      "NAME": "String",
-      "AREA": "Number",
-      "POP2005": "Number",
-      "REGION": "Number",
-      "SUBREGION": "Number",
-      "LON": "Number",
-      "LAT": "Number"
+  "vector_layers": [
+    {
+      "id": "valid.shapefile",
+      "description": "",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "fields": {
+        "FIPS": "String",
+        "ISO2": "String",
+        "ISO3": "String",
+        "UN": "Number",
+        "NAME": "String",
+        "AREA": "Number",
+        "POP2005": "Number",
+        "REGION": "Number",
+        "SUBREGION": "Number",
+        "LON": "Number",
+        "LAT": "Number"
+      }
     }
-  },
+  ],
   "bounds": [
     -180,
     -59.473062,

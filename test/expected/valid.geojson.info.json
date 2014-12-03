@@ -1,15 +1,17 @@
 {
-  "0": {
-    "id": "OGRGeoJSON",
-    "description": "",
-    "minzoom": 0,
-    "maxzoom": 22,
-    "fields": {
-      "kind": "String",
-      "name": "String",
-      "state": "String"
+  "vector_layers": [
+    {
+      "id": "OGRGeoJSON",
+      "description": "",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "fields": {
+        "kind": "String",
+        "name": "String",
+        "state": "String"
+      }
     }
-  },
+  ],
   "bounds": [
     -77.1174,
     38.7912,

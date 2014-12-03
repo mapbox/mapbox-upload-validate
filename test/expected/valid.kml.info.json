@@ -1,64 +1,66 @@
 {
-  "0": {
-    "id": "Magnitude_6",
-    "description": "",
-    "minzoom": 0,
-    "maxzoom": 22,
-    "fields": {
-      "Name": "String",
-      "Description": "String"
+  "vector_layers": [
+    {
+      "id": "Magnitude_6",
+      "description": "",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "fields": {
+        "Name": "String",
+        "Description": "String"
+      }
+    },
+    {
+      "id": "Magnitude_5",
+      "description": "",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "fields": {
+        "Name": "String",
+        "Description": "String"
+      }
+    },
+    {
+      "id": "Magnitude_4",
+      "description": "",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "fields": {
+        "Name": "String",
+        "Description": "String"
+      }
+    },
+    {
+      "id": "Magnitude_3",
+      "description": "",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "fields": {
+        "Name": "String",
+        "Description": "String"
+      }
+    },
+    {
+      "id": "Magnitude_2",
+      "description": "",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "fields": {
+        "Name": "String",
+        "Description": "String"
+      }
+    },
+    {
+      "id": "Magnitude_1",
+      "description": "",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "fields": {
+        "Name": "String",
+        "Description": "String"
+      }
     }
-  },
-  "1": {
-    "id": "Magnitude_5",
-    "description": "",
-    "minzoom": 0,
-    "maxzoom": 22,
-    "fields": {
-      "Name": "String",
-      "Description": "String"
-    }
-  },
-  "2": {
-    "id": "Magnitude_4",
-    "description": "",
-    "minzoom": 0,
-    "maxzoom": 22,
-    "fields": {
-      "Name": "String",
-      "Description": "String"
-    }
-  },
-  "3": {
-    "id": "Magnitude_3",
-    "description": "",
-    "minzoom": 0,
-    "maxzoom": 22,
-    "fields": {
-      "Name": "String",
-      "Description": "String"
-    }
-  },
-  "4": {
-    "id": "Magnitude_2",
-    "description": "",
-    "minzoom": 0,
-    "maxzoom": 22,
-    "fields": {
-      "Name": "String",
-      "Description": "String"
-    }
-  },
-  "5": {
-    "id": "Magnitude_1",
-    "description": "",
-    "minzoom": 0,
-    "maxzoom": 22,
-    "fields": {
-      "Name": "String",
-      "Description": "String"
-    }
-  },
+  ],
   "bounds": [
     -155.8387,
     17.7682,
