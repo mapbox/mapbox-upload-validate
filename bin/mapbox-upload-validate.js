@@ -21,4 +21,5 @@ validate(filepath, function(err, valid, message) {
   }
 
   console.log(filepath);
+  process.exit(0);
 });
