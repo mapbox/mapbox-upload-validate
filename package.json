@@ -29,7 +29,7 @@
     "split": "0.3.0",
     "step": "0.0.5",
     "tilejson": "^0.10.0",
-    "tilelive": "5.5.x",
+    "tilelive": "~5.5.4",
     "tilelive-omnivore": "0.2.0",
     "tilelive-vector": "3.2.1",
     "tiletype": "0.1.0",
