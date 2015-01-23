@@ -34,8 +34,7 @@ test('lib.validators.tilejson: hostnames', function(t) {
   t.ok(validHosts.test('a.tilemill.backend'), 'host is valid');
   t.ok(validHosts.test('tiles.mapbox.com'), 'host is valid');
   t.ok(validHosts.test('a.tiles.mapbox.com'), 'host is valid');
-  t.ok(validHosts.test('mapbox-staff.s3.amazonaws.com'), 'host is valid');
-  t.ok(validHosts.test('mapbox-sandbox-staff.s3.amazonaws.com'), 'host is valid');
+  t.ok(validHosts.test('tilestream-tilesets-production.s3.amazonaws.com'), 'host is valid');
   t.ok(validHosts.test('mapbox-satellite.s3.amazonaws.com'), 'host is valid');
   t.ok(validHosts.test('mapbox-cloudless-testing.s3.amazonaws.com'), 'host is valid');
   t.ok(validHosts.test('mapbox-pixelmonster.s3.amazonaws.com'), 'host is valid');

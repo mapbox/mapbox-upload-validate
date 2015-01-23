@@ -3,7 +3,7 @@
   "name": "Bright TileJSON",
   "scheme": "xyz",
   "tiles": [
-    "http://mapbox-staff.s3.amazonaws.com/datquest/new/{z}/{x}/{y}.vector.pbf"
+    "http://tilestream-tilesets-production.s3.amazonaws.com/datquest/new/{z}/{x}/{y}.vector.pbf"
   ],
   "minzoom": 0,
   "maxzoom": 6,
