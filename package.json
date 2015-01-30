@@ -1,6 +1,6 @@
 {
   "name": "mapbox-upload-validate",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "Validate that a file can be uploaded to Mapbox",
   "main": "index.js",
   "scripts": {
