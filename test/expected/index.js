@@ -50,7 +50,7 @@ module.exports = {
     'tiffilesize': 'File is larger than 1024 bytes. Too big to process.',
     'bad-projection': 'Invalid projection file.',
     'scrambled-files': 'Unknown filetype',
-    'bad-bounds': 'bounds east value must be between -180 and 180',
+    'bad-bounds': 'bounds east value must be between -360 and 360',
     'bad-tif': 'Unknown filetype'
   },
   mbtilesErrors: {
