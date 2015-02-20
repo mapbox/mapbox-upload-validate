@@ -48,7 +48,7 @@ module.exports = {
   omnivoreErrors: {
     'shpfilesize': 'File is larger than 1024 bytes. Too big to process.',
     'tiffilesize': 'File is larger than 1024 bytes. Too big to process.',
-    'bad-projection': 'Invalid projection file.',
+    'bad-projection': 'Invalid shapefile: invalid projection file',
     'scrambled-files': 'Unknown filetype',
     'bad-bounds': 'bounds east value must be between -360 and 360',
     'bad-tif': 'Unknown filetype'
