@@ -6,8 +6,8 @@
       "minzoom": 0,
       "maxzoom": 22,
       "fields": {
-        "Name": "String",
-        "Description": "String"
+        "Name": "a string",
+        "Description": "a string"
       }
     },
     {
@@ -16,8 +16,8 @@
       "minzoom": 0,
       "maxzoom": 22,
       "fields": {
-        "Name": "String",
-        "Description": "String"
+        "Name": "a string",
+        "Description": "a string"
       }
     },
     {
@@ -26,8 +26,8 @@
       "minzoom": 0,
       "maxzoom": 22,
       "fields": {
-        "Name": "String",
-        "Description": "String"
+        "Name": "a string",
+        "Description": "a string"
       }
     },
     {
@@ -36,8 +36,8 @@
       "minzoom": 0,
       "maxzoom": 22,
       "fields": {
-        "Name": "String",
-        "Description": "String"
+        "Name": "a string",
+        "Description": "a string"
       }
     },
     {
@@ -46,8 +46,8 @@
       "minzoom": 0,
       "maxzoom": 22,
       "fields": {
-        "Name": "String",
-        "Description": "String"
+        "Name": "a string",
+        "Description": "a string"
       }
     },
     {
@@ -56,25 +56,25 @@
       "minzoom": 0,
       "maxzoom": 22,
       "fields": {
-        "Name": "String",
-        "Description": "String"
+        "Name": "a string",
+        "Description": "a string"
       }
     }
   ],
   "bounds": [
-    -155.8387,
-    17.7682,
-    -64.427801,
-    67.3132
+    -179.2827,
+    -56.1221,
+    179.083599,
+    68.823
   ],
   "center": [
-    -110.13325,
-    42.5407,
-    1
+    -0.099551,
+    6.350449,
+    0
   ],
   "format": "pbf",
-  "maxzoom": 8,
-  "minzoom": 1,
+  "maxzoom": 6,
+  "minzoom": 0,
   "id": null,
   "name": "",
   "description": "",
