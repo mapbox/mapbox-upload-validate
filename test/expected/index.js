@@ -43,7 +43,9 @@ module.exports = {
   },
   serialtilesErrors: {
     'tilesize': 'Tile exceeds maximum size of 1k at z1. Reduce the detail of data at this zoom level or omit it by adjusting your minzoom.',
-    'noinfo': 'Missing Info object'
+    'noinfo': 'Missing Info object',
+    'ungzipped': 'Invalid tile (x0 y0 z1). Buffer must be gzipped',
+    'tiletype': 'Tile (x0 y0 z1) is not a valid tiletype'
   },
   omnivoreErrors: {
     'shpfilesize': 'File is larger than 1024 bytes. Too big to process.',

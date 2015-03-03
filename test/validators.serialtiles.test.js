@@ -36,6 +36,24 @@ test('lib.validators.serialtiles: tile too big', function(t) {
   });
 });
 
+test('lib.validators.serialtiles: invalid tiletype', function(t) {
+  t.plan(3); // assert that callback is not fired more than once
+  validate(fixtures.invalid.serialtiles.tiletype, 1024, function(err) {
+    t.ok(err, 'expected error');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    t.equal(err.message, expected.serialtilesErrors.tiletype, 'expected error message');
+  });
+});
+
+test('lib.validators.serialtiles: buffer not gzipped', function(t) {
+  t.plan(3); // assert that callback is not fired more than once
+  validate(fixtures.invalid.serialtiles.ungzipped, 1024, function(err) {
+    t.ok(err, 'expected error');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    t.equal(err.message, expected.serialtilesErrors.ungzipped, 'expected error message');
+  });
+});
+
 test('lib.validators.serialtiles: skip', function(t) {
   process.env.SkipSerialtilesValidation = 1;
   validate(fixtures.valid.serialtiles, 1024, function(err) {
