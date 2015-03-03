@@ -40,7 +40,9 @@ module.exports = {
       'xmlsize': path.join(__dirname, 'invalid.tm2z-xmlsize.tm2z')
     },
     'serialtiles': {
-      'noinfo': path.join(__dirname, 'invalid.serialtiles.noinfo.gz')
+      'noinfo': path.join(__dirname, 'invalid.serialtiles.noinfo.gz'),
+      'tiletype': path.join(__dirname, 'invalid.serialtiles.tiletype.gz'),
+      'ungzipped': path.join(__dirname, 'invalid.serialtiles.ungzipped.gz')
     },
     'omnivore': {
       'bad-projection': path.join(__dirname, 'invalid.omnivore.bad-projection', 'invalid.omnivore.bad-projection.shp'),
