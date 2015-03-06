@@ -5,6 +5,9 @@ before_install:
 - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 - sudo apt-get update -q
 - sudo apt-get install -y libstdc++6
+sudo: false
+before_install:
+- if [[ $(uname -s) == 'Linux' ]]; then wget https://launchpad.net/~ubuntu-toolchain-r/+archive/ubuntu/test/+files/libstdc%2B%2B6_4.8.1-2ubuntu1~12.04_amd64.deb && dpkg -x libstdc++6_4.8.1-2ubuntu1~12.04_amd64.deb ./ && export LD_PRELOAD=$(pwd)/usr/lib/x86_64-linux-gnu/libstdc++.so.6; fi
 env:
   global:
     secure: C6IoK0qKopK5m7f0qx8nDkP44VzCnABwSgKV8bWGTDqfrXKWkk4Zi7XD9of4IQtL87ALP6zgSoJMzNshH39K5VXqb10yLf8KessQQhyIy+3iGPkVo0J4aEkLv8wvHpRqFlthJCMCjQivVkEB9Z7pTGy37zUZJ7RAk0op8TyvAUw=

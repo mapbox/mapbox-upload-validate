@@ -4,7 +4,8 @@
   "description": "Validate that a file can be uploaded to Mapbox",
   "main": "index.js",
   "scripts": {
-    "test": "node test"
+    "pretest": "jshint bin lib test",
+    "test": "tape test/*.test.js"
   },
   "bin": {
     "mapbox-upload-validate": "bin/mapbox-upload-validate.js"
@@ -36,7 +37,15 @@
     "underscore": "^1.7.0"
   },
   "devDependencies": {
+    "jshint": "^2.6.3",
     "mapnik-test-data": "http://mapbox-npm.s3.amazonaws.com/package/mapnik-test-data-2.0.3-fece0a9c546074a1479e9eae2333184029bb2279.tgz",
     "tape": "^3.0.1"
+  },
+  "jshintConfig": {
+    "node": true,
+    "globalstrict": false,
+    "undef": true,
+    "unused": true,
+    "noarg": true
   }
 }

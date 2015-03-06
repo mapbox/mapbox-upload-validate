@@ -91,7 +91,7 @@ test('lib.validate.source: valid', function(t) {
   });
   q.awaitAll(function(err, sources) {
     t.ifError(err, 'does not error on valid files');
-    valid = sources.reduce(function(memo, source) {
+    var valid = sources.reduce(function(memo, source) {
       if (typeof source.getInfo !== 'function') memo = false;
       if (typeof source.getTile !== 'function') memo = false;
       return memo;

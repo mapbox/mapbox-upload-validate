@@ -4,7 +4,6 @@ var expected = require('./expected');
 var tilejson = require('../lib/validate').tilejson;
 var validHosts = require('../lib/validators/tilejson').validHosts;
 var tilelive = require('tilelive');
-var _ = require('underscore');
 
 process.env.MapboxAPIMaps = 'https://api.tiles.mapbox.com';
 

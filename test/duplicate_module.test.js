@@ -1,11 +1,10 @@
 var exec = require('child_process').exec;
 var test = require('tape').test;
 
-
 var count_module = function(name,callback) {
   var cmd = 'npm ls ' + name;
   exec(cmd,
-    function (error, stdout, stderr) {
+    function (error, stdout) {
       var pattern = new RegExp(name+'@','g');
       var match = stdout.match(pattern);
       if (!match) {
