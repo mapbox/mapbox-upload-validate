@@ -1,5 +1,3 @@
-var path = require('path');
-
 module.exports = {
   info: {
     'geojson': require('./valid.geojson.info.json'),

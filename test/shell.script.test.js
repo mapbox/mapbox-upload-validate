@@ -40,14 +40,13 @@ test('bin.mapbox-upload-validate: valid', function(t) {
   var q = queue();
   Object.keys(fixtures.valid).forEach(function(k) {
     q.defer(function(callback) {
-      var p = exec([run, fixtures.valid[k]].join(' '), function(err, stdout, stderr) {
+      exec([run, fixtures.valid[k]].join(' '), function(err, stdout, stderr) {
         if (err) throw err;
         t.equal(stdout, fixtures.valid[k] + '\n', k + ': stdout contains filepath');
         t.notOk(stderr, k + ': no error message');
         callback();
       });
-      // p.stdout.pipe(process.stdout);
-      // p.stderr.pipe(process.stderr);
+      //.stdout.pipe(process.stdout);
     });
   });
   q.await(function() {

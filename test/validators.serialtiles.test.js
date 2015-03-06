@@ -3,7 +3,6 @@ var fixtures = require('./fixtures');
 var expected = require('./expected');
 var serialtiles = require('../lib/validate').serialtiles;
 var tilelive = require('tilelive');
-var _ = require('underscore');
 
 process.env.MapboxAPIMaps = 'https://api.tiles.mapbox.com';
 
