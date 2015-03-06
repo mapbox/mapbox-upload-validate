@@ -43,7 +43,8 @@ module.exports = {
   },
   serialtilesErrors: {
     'tilesize': 'Tile exceeds maximum size of 1k at z1. Reduce the detail of data at this zoom level or omit it by adjusting your minzoom.',
-    'noinfo': 'Missing Info object'
+    'noinfo': 'Missing Info object',
+    'cantdeserialize': 'DeserializationError: Invalid data'
   },
   omnivoreErrors: {
     'shpfilesize': 'File is larger than 1024 bytes. Too big to process.',

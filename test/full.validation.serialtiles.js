@@ -11,9 +11,9 @@ test('full serialtiles validation: invalid', function(t) {
   Object.keys(fixtures.invalid.serialtiles).forEach(function(k) {
     q.defer(function(callback) {
       validate(fixtures.invalid.serialtiles[k], function(err, valid, message) {
-        t.ifError(err, 'no error');
-        t.notOk(valid, 'is not valid');
-        t.equal(message, expected.serialtilesErrors[k], 'expected message');
+        t.ifError(err, k + ': no error');
+        t.notOk(valid,  k + ': is not valid');
+        t.equal(message, expected.serialtilesErrors[k],  k + ': expected message');
         callback();
       });
     });

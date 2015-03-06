@@ -36,6 +36,15 @@ test('lib.validators.serialtiles: tile too big', function(t) {
   });
 });
 
+test('lib.validators.serialtiles: failure to deserialize', function(t) {
+  t.plan(3); // assert that callback is not fired more than once
+  validate(fixtures.invalid.serialtiles.cantdeserialize, function(err) {
+    t.ok(err, 'expected error');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    t.equal(err.message, expected.serialtilesErrors.cantdeserialize, 'expected error message');
+  });
+});
+
 test('lib.validators.serialtiles: skip', function(t) {
   process.env.SkipSerialtilesValidation = 1;
   validate(fixtures.valid.serialtiles, 1024, function(err) {
