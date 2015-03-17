@@ -21,7 +21,7 @@ function validate(filepath, maxSize, callback) {
       info: expected.info.tilejson,
       source: source
     };
-    
+
     if (maxSize) opts.limits = { max_tilesize: maxSize };
     serialtiles(opts, callback);
   });
@@ -33,6 +33,15 @@ test('lib.validators.serialtiles: tile too big', function(t) {
     t.ok(err, 'expected error');
     t.equal(err.code, 'EINVALID', 'expected error code');
     t.equal(err.message, expected.serialtilesErrors.tilesize, 'expected error message');
+  });
+});
+
+test('lib.validators.serialtiles: invalid gzipped file format', function(t) {
+  t.plan(3); 
+  validate(fixtures.invalid.serialtiles.gzipped, function(err) {
+    t.ok(err, 'expected error');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    t.equal(err.message, expected.serialtilesErrors.gzipped, 'expected error message');
   });
 });
 

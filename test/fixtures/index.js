@@ -43,6 +43,7 @@ module.exports = {
     'serialtiles': {
       'noinfo': path.join(__dirname, 'invalid.serialtiles.noinfo.gz'),
       'tiletype': path.join(__dirname, 'invalid.serialtiles.tiletype.gz'),
+      'gzipped': path.join(__dirname, 'invalid.serialtiles.gzipped.gz'),
       'cantdeserialize': path.join(__dirname, 'invalid.serialtiles.cannot-deserialize.gz')
     },
     'omnivore': {
