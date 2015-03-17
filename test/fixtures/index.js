@@ -12,6 +12,7 @@ module.exports = {
     'tm2z': path.join(__dirname, 'valid.tm2z'),
     'serialtiles': path.join(__dirname, 'valid.serialtiles.gz'),
     'serialtiles_pbf': path.join(__dirname, 'valid.serialtiles.pbf.gz'),
+    'serialtiles_png': path.join(__dirname, 'valid.serialtiles.png.gz'),
     'mbtiles-carmen2': path.join(__dirname, 'valid-carmen2.mbtiles'),
     'mbtiles-onlygrids': path.join(__dirname, 'valid-onlygrids.mbtiles'),
     'mbtiles-onlytiles': path.join(__dirname, 'valid-onlytiles.mbtiles'),
