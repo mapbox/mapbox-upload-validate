@@ -8,6 +8,8 @@ module.exports = {
     'tilejson': require('./valid.tilejson.info.json'),
     'tm2z': require('./valid.tm2z.info.json'),
     'serialtiles': require('./valid.serialtiles.info.json'),
+    'serialtiles_png': require('./valid.serialtiles_png.info.json'),
+    'serialtiles_pbf': require('./valid.serialtiles_pbf.info.json'),
     'mbtiles-carmen2': require('./valid.mbtiles.carmen2.info.json'),
     'mbtiles-onlygrids': require('./valid.mbtiles.onlygrids.info.json'),
     'mbtiles-onlytiles': require('./valid.mbtiles.onlytiles.info.json'),

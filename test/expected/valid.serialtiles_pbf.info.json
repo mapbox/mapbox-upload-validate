@@ -1,0 +1,18 @@
+{
+  "id": null,
+  "bounds": [ 
+    -180, 
+    -85.051129, 
+    180, 
+    85.051128 
+  ],
+  "minzoom": 0,
+  "maxzoom": 22,
+  "name": "",
+  "description": "",
+  "scheme": "xyz",
+  "version": "1.0.0",
+  "legend": null,
+  "center": null,
+  "tilejson": "style info object"
+}
