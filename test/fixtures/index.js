@@ -11,6 +11,7 @@ module.exports = {
     'tilejson': path.join(__dirname, 'valid.tilejson'),
     'tm2z': path.join(__dirname, 'valid.tm2z'),
     'serialtiles': path.join(__dirname, 'valid.serialtiles.gz'),
+    'serialtiles_pbf': path.join(__dirname, 'valid.serialtiles.pbf.gz'),
     'mbtiles-carmen2': path.join(__dirname, 'valid-carmen2.mbtiles'),
     'mbtiles-onlygrids': path.join(__dirname, 'valid-onlygrids.mbtiles'),
     'mbtiles-onlytiles': path.join(__dirname, 'valid-onlytiles.mbtiles'),
