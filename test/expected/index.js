@@ -46,7 +46,7 @@ module.exports = {
     'noinfo': 'Missing Info object',
     'cantdeserialize': 'DeserializationError: Invalid data',
     'tiletype': 'Invalid tiletype',
-    'gzipped': 'Empty tile'
+    'gzipped': 'DeserializationError: Invalid data'
   },
   omnivoreErrors: {
     'shpfilesize': 'File is larger than 1024 bytes. Too big to process.',
