@@ -46,7 +46,6 @@ test('bin.mapbox-upload-validate: valid', function(t) {
         t.notOk(stderr, k + ': no error message');
         callback();
       });
-      //.stdout.pipe(process.stdout);
     });
   });
   q.await(function() {
