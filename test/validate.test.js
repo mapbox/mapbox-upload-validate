@@ -17,7 +17,7 @@ var validProtocols = validFiletypes.map(function(k) {
   if (k === 'gpx') return 'omnivore:';
   if (k === 'tilejson') return 'tilejson:';
   if (k === 'tm2z') return 'tm2z:';
-  if (k === 'serialtiles') return 'serialtiles:';
+  if (k.indexOf('serialtiles') === 0) return 'serialtiles:';
 });
 
 test('lib.validate.filepath: valid', function(t) {
