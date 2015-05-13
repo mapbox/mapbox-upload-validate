@@ -13,7 +13,6 @@ module.exports = {
     'mbtiles-carmen2': require('./valid.mbtiles.carmen2.info.json'),
     'mbtiles-onlygrids': require('./valid.mbtiles.onlygrids.info.json'),
     'mbtiles-onlytiles': require('./valid.mbtiles.onlytiles.info.json'),
-    'mbtiles-prepare': require('./valid.mbtiles.prepare.info.json'),
     'mbtiles-tilesgrids': require('./valid.mbtiles.tilesgrid.info.json'),
     'mbtiles-update1': require('./valid.mbtiles.update1.info.json'),
     'mbtiles-update2': require('./valid.mbtiles.update2.info.json'),
@@ -67,7 +66,8 @@ module.exports = {
     'limits': 'Tileset exceeds processing limit.',
     'tiletoobig': 'Tile exceeds maximum size of 0k at z1. Reduce the detail of data at this zoom level or omit it by adjusting your minzoom.',
     'gridtoobig': 'Grid exceeds maximum size of 0k at z1. Reduce the detail of data at this zoom level or omit it by adjusting your minzoom.',
-    'nulltile': 'Tile is invalid'
+    'nulltile': 'Tile is invalid',
+    'prepare': 'Source cannot contain prepare key'
   },
   unsupportedErrors: 'Unknown filetype'
 };

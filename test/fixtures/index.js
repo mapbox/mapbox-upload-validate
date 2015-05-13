@@ -16,7 +16,6 @@ module.exports = {
     'mbtiles-carmen2': path.join(__dirname, 'valid-carmen2.mbtiles'),
     'mbtiles-onlygrids': path.join(__dirname, 'valid-onlygrids.mbtiles'),
     'mbtiles-onlytiles': path.join(__dirname, 'valid-onlytiles.mbtiles'),
-    'mbtiles-prepare': path.join(__dirname, 'valid-prepare.mbtiles'),
     'mbtiles-tilesgrids': path.join(__dirname, 'valid-tilesgrid.mbtiles'),
     'mbtiles-update1': path.join(__dirname, 'valid-update1.mbtiles'),
     'mbtiles-update2': path.join(__dirname, 'valid-update2.mbtiles'),
@@ -60,7 +59,8 @@ module.exports = {
       'oldcarmen': path.join(__dirname, 'invalid.mbtiles-oldcarmen.mbtiles'),
       'empty': path.join(__dirname, 'invalid.mbtiles-empty.mbtiles'),
       'limits': path.join(__dirname, 'invalid.mbtiles-limits.mbtiles'),
-      'nulltile': path.join(__dirname, 'invalid.mbtiles-null-tile.mbtiles')
+      'nulltile': path.join(__dirname, 'invalid.mbtiles-null-tile.mbtiles'),
+      'prepare': path.join(__dirname, 'invalid.mbtiles-prepare.mbtiles')
     }
   }
 };
