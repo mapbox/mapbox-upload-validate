@@ -59,7 +59,8 @@ module.exports = {
       'oldcarmen': path.join(__dirname, 'invalid.mbtiles-oldcarmen.mbtiles'),
       'empty': path.join(__dirname, 'invalid.mbtiles-empty.mbtiles'),
       'limits': path.join(__dirname, 'invalid.mbtiles-limits.mbtiles'),
-      'nulltile': path.join(__dirname, 'invalid.mbtiles-null-tile.mbtiles')
+      'nulltile': path.join(__dirname, 'invalid.mbtiles-null-tile.mbtiles'),
+      'prepare': path.join(__dirname, 'invalid.mbtiles-prepare.mbtiles')
     }
   }
 };
