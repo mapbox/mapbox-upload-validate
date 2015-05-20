@@ -26,6 +26,7 @@
     "mapbox-studio-pro-fonts": "https://mapbox-npm.s3.amazonaws.com/package/mapbox-studio-pro-fonts-1.0.0-9870a90b713f307b9391829602f4d5857e419615.tgz",
     "mapnik": "~3.2.0",
     "mbtiles": "^0.8.0",
+    "pretty-bytes": "^1.0.4",
     "queue-async": "^1.0.7",
     "split": "0.3.0",
     "step": "0.0.5",
