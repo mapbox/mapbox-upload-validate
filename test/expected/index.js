@@ -49,8 +49,8 @@ module.exports = {
     'gzipped': 'DeserializationError: Invalid data'
   },
   omnivoreErrors: {
-    'shpfilesize': 'File is larger than 1024 bytes. Too big to process.',
-    'tiffilesize': 'File is larger than 1024 bytes. Too big to process.',
+    'shpfilesize': 'File is larger than 1.02 kB. Too big to process.',
+    'tiffilesize': 'File is larger than 1.02 kB. Too big to process.',
     'bad-projection': 'Invalid shapefile: invalid projection file',
     'scrambled-files': 'Unknown filetype',
     'bad-bounds': 'bounds east value must be between -360 and 360',
