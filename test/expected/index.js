@@ -34,7 +34,8 @@ module.exports = {
     'maxdrawtime': 'At least one tile exceeds the draw time limit of 1ms. Please optimize your styles.',
     'avgdrawtime': 'The average tile draw time exceeds the limit of 1ms. Please optimize your styles.',
     'maximgbytes': 'At least one rendered tile exceeds the file size limit of 0.0k. Try lowering the number of PNG colors or JPEG quality in your project settings.',
-    'avgimgbytes': 'The average rendered tile exceeds the file size limit of 0.0k. Try lowering the number of PNG colors or JPEG quality in your project settings.'
+    'avgimgbytes': 'The average rendered tile exceeds the file size limit of 0.0k. Try lowering the number of PNG colors or JPEG quality in your project settings.',
+    'parsecolor': 'Invalid style'
   },
   tilejsonErrors: {
     'metadatasize': 'Metadata exceeds limit of 0.0k.',
