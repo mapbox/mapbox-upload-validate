@@ -38,6 +38,7 @@ module.exports = {
       'missingfont': path.join(__dirname, 'invalid.tm2z-missing-font.tm2z'),
       'missingimage': path.join(__dirname, 'invalid.tm2z-missing-image.tm2z'),
       'nodirectory': path.join(__dirname, 'invalid.tm2z-nodirectory.tm2z'),
+      'parsecolor': path.join(__dirname, 'invalid.tm2z-parsecolor.tm2z'),
       'xmlsize': path.join(__dirname, 'invalid.tm2z-xmlsize.tm2z')
     },
     'serialtiles': {
