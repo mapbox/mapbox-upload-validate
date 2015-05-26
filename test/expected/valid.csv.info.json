@@ -1,0 +1,61 @@
+{
+  "bounds": [ 
+    -77.092593, 
+    38.914278, 
+    -77.003685, 
+    38.961038 
+  ],
+  "center": [
+    -77.048139, 
+    38.937658, 
+    0
+  ],
+  "format": "pbf",
+  "vector_layers": [
+    {
+      "id": "bbl_current_csv",
+      "description": "",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "fields": {
+        "BBL_LICENSE_FACT_ID": "Number",
+        "LICENSESTATUS": "String",
+        "LICENSECATEGORY": "String",
+        "CUST_NUM": "Number",
+        "TRADE_NAME": "String",
+        "LICENSE_START_DATE": "String",
+        "LICENSE_EXPIRATION_DATE": "String",
+        "LICENSE_ISSUE_DATE": "String",
+        "AGENT_PHONE": "String",
+        "LASTMODIFIEDDATE": "String",
+        "CITY": "String",
+        "STATE": "String",
+        "SITEADDRESS": "String",
+        "LATITUDE": "Number",
+        "LONGITUDE": "Number",
+        "ZIPCODE": "Number",
+        "MARADDRESSREPOSITORYID": "Number",
+        "DCSTATADDRESSKEY": "Number",
+        "DCSTATLOCATIONKEY": "Number",
+        "WARD": "Number",
+        "ANC": "String",
+        "SMD": "String",
+        "DISTRICT": "String",
+        "PSA": "Number",
+        "NEIGHBORHOODCLUSTER": "Number",
+        "HOTSPOT2006NAME": "String",
+        "HOTSPOT2005NAME": "String",
+        "HOTSPOT2004NAME": "String",
+        "BUSINESSIMPROVEMENTDISTRICT": "String"
+      }
+    }
+  ],
+  "maxzoom": 11,
+  "minzoom": 0,
+  "id": null,
+  "name": "",
+  "description": "",
+  "version": "1.0.0",
+  "legend": null,
+  "scheme": "xyz"
+}

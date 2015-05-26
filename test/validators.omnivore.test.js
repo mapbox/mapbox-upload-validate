@@ -43,3 +43,12 @@ test('lib.validators.omnivore: tif file too big', function(t) {
     t.equal(err.message, expected.omnivoreErrors.tiffilesize, 'expected error message');
   });
 });
+
+test('lib.validators.omnivore: csv file too big', function(t) {
+  t.plan(3); // assert that callback is not fired more than once
+  validate(fixtures.valid.csv, 1024, function(err) {
+    t.ok(err, 'expected error');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    t.equal(err.message, expected.omnivoreErrors.csvfilesize, 'expected error message');
+  });
+});
