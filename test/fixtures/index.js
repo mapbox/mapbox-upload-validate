@@ -3,6 +3,7 @@ var datapath = path.dirname(require.resolve('mapnik-test-data'));
 
 module.exports = {
   valid: {
+    'csv': path.join(datapath, 'data/csv/bbl_current_csv.csv'),
     'geojson': path.join(datapath, 'data/geojson/DC_polygon.geo.json'),
     'gpx': path.join(datapath, 'data/gpx/fells_loop.gpx'),
     'kml': path.join(datapath, 'data/kml/1week_earthquake.kml'),

@@ -10,6 +10,7 @@ process.env.MapboxAPIMaps = 'https://api.tiles.mapbox.com';
 var validFiletypes = Object.keys(fixtures.valid);
 var validProtocols = validFiletypes.map(function(k) {
   if (k.indexOf('mbtiles') === 0) return 'mbtiles:';
+  if (k === 'csv') return 'omnivore:';
   if (k === 'shp') return 'omnivore:';
   if (k === 'tif') return 'omnivore:';
   if (k === 'geojson') return 'omnivore:';

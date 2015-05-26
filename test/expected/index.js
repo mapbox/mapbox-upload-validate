@@ -1,5 +1,6 @@
 module.exports = {
   info: {
+    'csv': require('./valid.csv.info.json'),
     'geojson': require('./valid.geojson.info.json'),
     'gpx': require('./valid.gpx.info.json'),
     'kml': require('./valid.kml.info.json'),
@@ -50,6 +51,7 @@ module.exports = {
     'gzipped': 'DeserializationError: Invalid data'
   },
   omnivoreErrors: {
+    'csvfilesize': 'File is larger than 1.02 kB. Too big to process.',
     'shpfilesize': 'File is larger than 1.02 kB. Too big to process.',
     'tiffilesize': 'File is larger than 1.02 kB. Too big to process.',
     'bad-projection': 'Invalid shapefile: invalid projection file',
