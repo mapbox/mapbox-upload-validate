@@ -3,6 +3,9 @@ var fixtures = require('./fixtures');
 var expected = require('./expected');
 var omnivore = require('../lib/validate').omnivore;
 var tilelive = require('tilelive');
+var mock = require('mock-fs');
+var crypto = require('crypto');
+var fs = require('fs');
 
 process.env.MapboxAPIMaps = 'https://api.tiles.mapbox.com';
 
@@ -50,5 +53,28 @@ test('lib.validators.omnivore: csv file too big', function(t) {
     t.ok(err, 'expected error');
     t.equal(err.code, 'EINVALID', 'expected error code');
     t.equal(err.message, expected.omnivoreErrors.csvfilesize, 'expected error message');
+  });
+});
+
+test('lib.validators.omnivore: tif file bigger than default omnivore size is accepted', function(t) {
+  var mockConfig = {};
+  mockConfig[fixtures.valid.tif] = Buffer.concat([fs.readFileSync(fixtures.valid.tif), crypto.randomBytes(300 * 1024 * 1024)]);
+  mock(mockConfig);
+  validate(fixtures.valid.tif, function(err) {
+    t.ifError(err, 'accepted 300+ MB tif');
+    mock.restore();
+    t.end();
+  });
+});
+
+test('lib.validators.omnivore: csv file less than default omnivore size is rejected', function(t) {
+  var mockConfig = {};
+  mockConfig[fixtures.valid.csv] = Buffer.concat([fs.readFileSync(fixtures.valid.csv), crypto.randomBytes(100 * 1024 * 1024)]);
+  mock(mockConfig);
+  validate(fixtures.valid.csv, function(err) {
+    t.ok(err, 'rejected 100MB csv');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    mock.restore();
+    t.end();
   });
 });
