@@ -1,3 +1,7 @@
+## 2.7.0
+
+* Refactored serialtiles validation, allows full validation of vector tiles to be skipped via environment variable
+
 ## 2.6.9
 
 * Updates `node-tilejson` dependency in order to support node v0.12.x
