@@ -34,7 +34,7 @@
     "tilejson": "^0.13.0",
     "tilelive": "^5.7.0",
     "tilelive-omnivore": "~1.4.0",
-    "tilelive-vector": "~3.3.0",
+    "tilelive-vector": "~3.4.0",
     "tiletype": "0.1.0",
     "underscore": "^1.7.0"
   },
