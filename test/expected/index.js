@@ -54,7 +54,7 @@ module.exports = {
     'csvfilesize': 'File is larger than 1.02 kB. Too big to process.',
     'shpfilesize': 'File is larger than 1.02 kB. Too big to process.',
     'tiffilesize': 'File is larger than 1.02 kB. Too big to process.',
-    'bad-projection': 'Invalid shapefile: invalid projection file',
+    'bad-projection': 'Error creating Mapnik Datasource: could not create file mapping for /Users/geoint/carol-dev/mapbox-upload-validate/test/fixtures/invalid.omnivore.bad-projection/invalid.omnivore.bad-projection.shx',
     'scrambled-files': 'Unknown filetype',
     'bad-bounds': 'bounds east value must be between -360 and 360',
     'bad-tif': 'Unknown filetype'
