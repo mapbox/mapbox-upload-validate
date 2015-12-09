@@ -66,15 +66,3 @@ test('lib.validators.omnivore: tif file bigger than default omnivore size is acc
     t.end();
   });
 });
-
-test('lib.validators.omnivore: csv file less than default omnivore size is rejected', function(t) {
-  var mockConfig = {};
-  mockConfig[fixtures.valid.csv] = Buffer.concat([fs.readFileSync(fixtures.valid.csv), crypto.randomBytes(100 * 1024 * 1024)]);
-  mock(mockConfig);
-  validate(fixtures.valid.csv, function(err) {
-    t.ok(err, 'rejected 100MB csv');
-    t.equal(err.code, 'EINVALID', 'expected error code');
-    mock.restore();
-    t.end();
-  });
-});

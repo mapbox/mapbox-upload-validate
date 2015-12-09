@@ -19,7 +19,8 @@ test('bin.mapbox-upload-validate: invalid', function(t) {
       t.equal(stdout, '', [type, reason].join('.') + ': nothing logged to stdout');
       var expect = expected[type + 'Errors'];
       if (reason) expect = expect[reason];
-      t.equal(stderr, expect + '\n', [type, reason].join('.') + ': expected error message');
+
+      t.ok(stderr.indexOf(expect) > -1, [type, reason].join('.') + ': expected error message');
       callback();
     });
   }
