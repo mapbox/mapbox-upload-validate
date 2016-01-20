@@ -17,8 +17,9 @@ var count_module = function(name,callback) {
   test('Duplicate modules: there should only be one ' + mod + ' otherwise you are asking for pwnage', function(t) {
     count_module(mod, function(err,count) {
       if (err) throw err;
-      t.notEqual(count,0,'you are missing the ' + mod + ' module (`npm ls ' + mod + '`)');
-      t.equal(count,1,'you have more than one copy of ' + mod + ' (`npm ls ' + mod + '`)');
+      if (count !== undefined && count > 0) {
+          t.equal(count,1,'you have more than one copy of ' + mod + ' (`npm ls ' + mod + '`)');
+      }
       t.end();
     });
   });
