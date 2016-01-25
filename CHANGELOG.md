@@ -1,3 +1,11 @@
+## 3.1.0
+
+* Upgraded to tilelive-omnivore@2.1.0
+
+## 3.0.0
+
+* Upgraded to tilelive-omnivore@2.0.0
+
 ## 2.7.0
 
 * Refactored serialtiles validation, allows full validation of vector tiles to be skipped via environment variable
