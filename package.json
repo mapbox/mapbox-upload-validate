@@ -27,7 +27,7 @@
     "mapbox-upload-limits": "^1.0.4",
     "mapnik": "~3.4.11",
     "mbtiles": "^0.8.0",
-    "pretty-bytes": "^1.0.4",
+    "pretty-bytes": "^3.0.0",
     "queue-async": "^1.0.7",
     "split": "~1.0.0",
     "step": "~0.0.6",
