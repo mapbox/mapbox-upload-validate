@@ -22,7 +22,7 @@ var validProtocols = validFiletypes.map(function(k) {
 });
 
 test('lib.validate.filepath: valid', function(t) {
-  var q = queue();
+  var q = queue(1);
   validFiletypes.forEach(function(k) {
     q.defer(validate.filepath, fixtures.valid[k]);
   });
