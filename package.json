@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "pretest": "jshint bin lib test",
-    "test": "tape test/*.test.js"
+    "test": "tape test/*.test.js",
+    "coverage": "istanbul cover tape test/*.js && coveralls < ./coverage/lcov.info"
   },
   "bin": {
     "mapbox-upload-validate": "bin/mapbox-upload-validate.js"
@@ -42,7 +43,9 @@
     "jshint": "^2.6.3",
     "mapnik-test-data": "http://mapbox-npm.s3.amazonaws.com/package/mapnik-test-data-2.0.3-fece0a9c546074a1479e9eae2333184029bb2279.tgz",
     "mock-fs": "^2.7.0",
-    "tape": "^3.0.1"
+    "tape": "^3.0.1",
+    "istanbul": "~0.3.17",
+    "coveralls": "~2.11.2"
   },
   "jshintConfig": {
     "node": true,
