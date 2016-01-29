@@ -13,7 +13,7 @@ test('full omnivore validation: invalid', function(t) {
       validate(fixtures.invalid.omnivore[k], function(err, valid, message) {
         t.ifError(err, 'no error: ' + k);
         t.notOk(valid, 'is not valid: ' + k);
-        t.equal(message, expected.omnivoreErrors[k], 'expected message');
+        t.ok(message.indexOf(expected.omnivoreErrors[k]) == 0, 'expected message');
         callback();
       });
     });
