@@ -7,7 +7,7 @@ var queue = require('queue-async');
 var _ = require('underscore');
 var run = path.resolve(__dirname, '../bin/mapbox-upload-validate.js');
 
-test('bin.mapbox-upload-validate: invalid', function(t) {
+test.only('bin.mapbox-upload-validate: invalid', function(t) {
   function validate(type, filepath, reason, callback) {
     if (!callback) {
       callback = reason;
