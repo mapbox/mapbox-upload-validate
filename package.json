@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "pretest": "jshint bin lib test",
-    "test": "tape test/*.test.js",
+    "test": "eslint index.js lib && tape test/*.test.js",
     "coverage": "istanbul cover tape test/*.js && coveralls < ./coverage/lcov.info"
   },
   "bin": {
@@ -45,7 +45,9 @@
     "mock-fs": "^2.7.0",
     "tape": "^3.0.1",
     "istanbul": "~0.3.17",
-    "coveralls": "~2.11.2"
+    "coveralls": "~2.11.2",
+    "eslint": "~1.00.0",
+    "eslint-config-unstyled": "^1.1.0"
   },
   "jshintConfig": {
     "node": true,
