@@ -6,10 +6,10 @@ var tilelive = require('tilelive');
 
 process.env.MapboxAPIMaps = 'https://api.tiles.mapbox.com';
 
-function validate(filepath, maxSize, callback) {
+function validate(filepath, limits, callback) {
   if (!callback) {
-    callback = maxSize;
-    maxSize = null;
+    callback = limits;
+    limits = null;
   }
 
   tilelive.load('serialtiles://' + filepath, function(err, source) {
@@ -22,17 +22,26 @@ function validate(filepath, maxSize, callback) {
       source: source
     };
 
-    if (maxSize) opts.limits = { max_tilesize: maxSize };
+    if (limits) opts.limits = limits;
     serialtiles(opts, callback);
   });
 }
 
 test('lib.validators.serialtiles: tile too big', function(t) {
   t.plan(3); // assert that callback is not fired more than once
-  validate(fixtures.valid.serialtiles, 1024, function(err) {
+  validate(fixtures.valid.serialtiles, { max_tilesize: 1024 }, function(err) {
     t.ok(err, 'expected error');
     t.equal(err.code, 'EINVALID', 'expected error code');
     t.equal(err.message, expected.serialtilesErrors.tilesize, 'expected error message');
+  });
+});
+
+test('lib.validators.serialtiles: file too big', function(t) {
+  t.plan(3); // assert that callback is not fired more than once
+  validate(fixtures.valid.serialtiles, { max_filesize: 1024 }, function(err) {
+    t.ok(err, 'expected error');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    t.equal(err.message, expected.serialtilesErrors.filetoobig, 'expected error message');
   });
 });
 
@@ -89,7 +98,7 @@ test('lib.validators.serialtiles: skip vector-tile validation', function(t) {
 
 test('lib.validators.serialtiles: skip', function(t) {
   process.env.SkipSerialtilesValidation = 1;
-  validate(fixtures.valid.serialtiles, 1024, function(err) {
+  validate(fixtures.valid.serialtiles, { max_tilesize: 1024 }, function(err) {
     t.ifError(err, 'no error');
     t.end();
   });

@@ -105,3 +105,12 @@ test('lib.validators.mbtiles: grid too big', function(t) {
     t.end();
   });
 });
+
+test('lib.validators.mbtiles: file too big', function(t) {
+  validate(fixtures.valid['mbtiles-onlygrids'], { max_filesize: 1024 }, function(err) {
+    t.ok(err, 'expected error');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    t.equal(err.message, expected.mbtilesErrors.filetoobig, 'expected error message');
+    t.end();
+  });
+});

@@ -36,7 +36,8 @@ module.exports = {
     'avgdrawtime': 'The average tile draw time exceeds the limit of 1ms. Please optimize your styles.',
     'maximgbytes': 'At least one rendered tile exceeds the file size limit of 0.0k. Try lowering the number of PNG colors or JPEG quality in your project settings.',
     'avgimgbytes': 'The average rendered tile exceeds the file size limit of 0.0k. Try lowering the number of PNG colors or JPEG quality in your project settings.',
-    'parsecolor': 'Invalid style'
+    'parsecolor': 'Invalid style',
+    'filetoobig': 'File is larger than 1.02 kB. Too big to process.'
   },
   tilejsonErrors: {
     'metadatasize': 'Metadata exceeds limit of 0.0k.',
@@ -48,7 +49,8 @@ module.exports = {
     'noinfo': 'Missing Info object',
     'cantdeserialize': 'DeserializationError: Invalid data',
     'tiletype': 'Invalid tiletype',
-    'gzipped': 'DeserializationError: Invalid data'
+    'gzipped': 'DeserializationError: Invalid data',
+    'filetoobig': 'File is larger than 1.02 kB. Too big to process.'
   },
   omnivoreErrors: {
     'csvfilesize': 'File is larger than 1.02 kB. Too big to process.',
@@ -70,7 +72,8 @@ module.exports = {
     'tiletoobig': 'Tile exceeds maximum size of 0k at z1. Reduce the detail of data at this zoom level or omit it by adjusting your minzoom.',
     'gridtoobig': 'Grid exceeds maximum size of 0k at z1. Reduce the detail of data at this zoom level or omit it by adjusting your minzoom.',
     'nulltile': 'Tile is invalid',
-    'prepare': 'Source cannot contain prepare key'
+    'prepare': 'Source cannot contain prepare key',
+    'filetoobig': 'File is larger than 1.02 kB. Too big to process.'
   },
   unsupportedErrors: 'Unknown filetype'
 };
