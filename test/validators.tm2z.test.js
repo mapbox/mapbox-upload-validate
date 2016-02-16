@@ -79,3 +79,12 @@ test('lib.validators.tm2z: invalid avg imgbytes', function(t) {
     t.end();
   });
 });
+
+test('lib.validators.tm2z: filesize too big', function(t) {
+  validate(fixtures.valid.tm2z, { max_filesize: 1024 }, function(err) {
+    t.ok(err, 'expected error');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    t.equal(err.message, expected.tm2zErrors.filetoobig, 'expected error message');
+    t.end();
+  });
+});
