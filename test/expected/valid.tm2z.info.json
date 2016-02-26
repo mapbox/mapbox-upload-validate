@@ -15,7 +15,7 @@
   "maxzoom": 22,
   "minzoom": 0,
   "scale": "1",
-  "source": "mapbox:///mapbox.mapbox-streets-v3",
+  "source": "mapbox:///mapbox.mapbox-streets-v4",
   "id": null,
   "name": "",
   "description": "",

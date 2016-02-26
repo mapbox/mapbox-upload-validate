@@ -1,6 +1,6 @@
 {
   "name": "mapbox-upload-validate",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "Validate that a file can be uploaded to Mapbox",
   "main": "index.js",
   "scripts": {
@@ -35,7 +35,7 @@
     "tilejson": "^0.13.0",
     "tilelive": "~5.11.0",
     "tilelive-omnivore": "~2.1.0",
-    "tilelive-vector": "~3.5.0",
+    "tilelive-vector": "~3.8.0",
     "tiletype": "~0.3.0",
     "underscore": "^1.7.0"
   },
