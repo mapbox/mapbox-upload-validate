@@ -7,7 +7,7 @@ var queue = require('queue-async');
 process.env.MapboxAPIMaps = 'https://api.tiles.mapbox.com';
 
 test('full serialtiles validation: invalid', function(t) {
-  var q = queue();
+  var q = queue(1);
   Object.keys(fixtures.invalid.serialtiles).forEach(function(k) {
     q.defer(function(callback) {
       validate(fixtures.invalid.serialtiles[k], function(err, valid, message) {
