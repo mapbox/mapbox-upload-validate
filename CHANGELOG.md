@@ -1,3 +1,10 @@
+## 3.3.0
+
+* Updated to use mapnik 3.5.0
+* Updated to tilelive 5.12.0
+* Removed the use of `parse()` within mapnik.
+* Changed vector tile validation as part of mapnik 3.5.0, now will error on more common vector tile issues.
+
 ## 3.1.0
 
 * Upgraded to tilelive-omnivore@2.1.0
