@@ -111,7 +111,6 @@ test('lib.validators.mbtiles: file too big', function(t) {
     t.ok(err, 'expected error');
     t.equal(err.code, 'EINVALID', 'expected error code');
     t.equal(err.message, expected.mbtilesErrors.filetoobig, 'expected error message');
-    console.log('made it here?');
     t.end();
   });
 });
