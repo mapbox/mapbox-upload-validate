@@ -90,14 +90,6 @@ test('lib.validators.serialtiles: valid PNG', function(t) {
 
 test('lib.validators.serialtiles: skip vector-tile validation', function(t) {
   process.env.SkipVectorTileValidation = 1;
-  validate(fixtures.invalid.serialtiles.gzipped, function(err) {
-    t.ifError(err, 'no error');
-    t.end();
-  });
-});
-
-test('lib.validators.serialtiles: skip', function(t) {
-  process.env.SkipSerialtilesValidation = 1;
   validate(fixtures.valid.serialtiles, { max_tilesize: 1024 }, function(err) {
     t.ifError(err, 'no error');
     t.end();
