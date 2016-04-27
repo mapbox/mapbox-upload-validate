@@ -1,3 +1,7 @@
+## 3.4.0
+
+* Upgraded to tilelive-omnivore@2.4.0
+
 ## 3.3.0
 
 * Updated to use mapnik 3.5.0
