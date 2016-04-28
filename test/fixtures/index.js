@@ -52,7 +52,8 @@ module.exports = {
       'bad-projection': path.join(__dirname, 'invalid.omnivore.bad-projection', 'invalid.omnivore.bad-projection.shp'),
       'scrambled-files': path.join(__dirname, 'invalid.omnivore.scrambled-files', 'missing_type.shp'),
       'bad-bounds': path.join(__dirname, 'invalid.omnivore.geojson-bounds.json'),
-      'bad-tif': path.join(__dirname, 'invalid.omnivore.tif')
+      'bad-tif': path.join(__dirname, 'invalid.omnivore.tif'),
+      'kmllayers': path.join(__dirname, 'invalid.omnivore.toomanylayers.kml')
     },
     'mbtiles': {
       'oldtemplate': path.join(__dirname, 'invalid.mbtiles-template.mbtiles'),

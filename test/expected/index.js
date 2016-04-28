@@ -62,7 +62,8 @@ module.exports = {
     'bad-projection': 'Error creating Mapnik Datasource: could not create file mapping for',
     'scrambled-files': 'Unknown filetype',
     'bad-bounds': 'bounds east value must be between -360 and 360',
-    'bad-tif': 'Unknown filetype'
+    'bad-tif': 'Unknown filetype',
+    'kmllayers': '16 layers found. Maximum of 15 layers allowed.'
   },
   mbtilesErrors: {
     'oldtemplate': 'Use TileMill 0.7 or later to export MBTiles with a valid template.',
