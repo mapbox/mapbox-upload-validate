@@ -1,3 +1,7 @@
+## 3.5.0
+
+* Add validation for # of KML layers
+
 ## 3.4.0
 
 * Upgraded to tilelive-omnivore@2.4.0
