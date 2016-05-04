@@ -56,6 +56,15 @@ test('lib.validators.omnivore: csv file too big', function(t) {
   });
 });
 
+test('lib.validators.omnivore: too many kml layers', function(t) {
+  t.plan(3); // assert that callback is not fired more than once
+  validate(fixtures.invalid.omnivore.kmllayers, 1024, function(err) {
+    t.ok(err, 'expected error');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    t.equal(err.message, expected.omnivoreErrors.kmllayers, 'expected error message');
+  });
+});
+
 test('lib.validators.omnivore: tif file bigger than default omnivore size is accepted', function(t) {
   var mockConfig = {};
   mockConfig[fixtures.valid.tif] = Buffer.concat([fs.readFileSync(fixtures.valid.tif), crypto.randomBytes(300 * 1024 * 1024)]);
