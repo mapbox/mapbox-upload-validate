@@ -23,7 +23,7 @@
   "homepage": "https://github.com/mapbox/mapbox-upload-validate",
   "dependencies": {
     "mapbox-file-sniff": "^0.4.3",
-    "mapnik-omnivore": "https://github.com/mapbox/mapnik-omnivore/tarball/minmaxsix",
+    "mapnik-omnivore": "~8.0.0",
     "mapbox-studio-default-fonts": "https://mapbox-npm.s3.amazonaws.com/package/mapbox-studio-default-fonts-0.0.4-4afb5235f457bd1c1a5a70fce6c2aa83bf7a851e.tgz",
     "mapbox-studio-pro-fonts": "https://mapbox-npm.s3.amazonaws.com/package/mapbox-studio-pro-fonts-1.0.0-9870a90b713f307b9391829602f4d5857e419615.tgz",
     "mapbox-upload-limits": "^1.2.0",
@@ -35,7 +35,7 @@
     "step": "~0.0.6",
     "tilejson": "^0.13.0",
     "tilelive": "~5.12.0",
-    "tilelive-omnivore": "https://github.com/mapbox/tilelive-omnivore/tarball/minmaxsix",
+    "tilelive-omnivore": "~3.0.0",
     "tilelive-vector": "~3.9.1",
     "tiletype": "~0.3.0",
     "underscore": "^1.7.0"
