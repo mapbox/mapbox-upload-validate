@@ -1,3 +1,7 @@
+## 3.5.1
+
+* tilelive-omnivore@3.0.0, mapnik-omnivore@8.0.0
+
 ## 3.5.0
 
 * Add validation for # of KML layers
