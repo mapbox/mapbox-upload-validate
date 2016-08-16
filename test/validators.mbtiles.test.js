@@ -88,6 +88,15 @@ test('lib.validators.mbtiles: null tile', function(t) {
   });
 });
 
+test('lib.validators.mbtiles: no tile_data column', function(t) {
+  validate(fixtures.invalid.mbtiles.nocolumn, function(err) {
+    t.ok(err, 'expected error');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    t.equal(err.message, expected.mbtilesErrors.nulltile, 'expected error message');
+    t.end();
+  });
+});
+
 test('lib.validators.mbtiles: tile too big', function(t) {
   validate(fixtures.valid['mbtiles-onlytiles'], { max_tilesize: 500 }, function(err) {
     t.ok(err, 'expected error');
@@ -114,3 +123,4 @@ test('lib.validators.mbtiles: file too big', function(t) {
     t.end();
   });
 });
+
