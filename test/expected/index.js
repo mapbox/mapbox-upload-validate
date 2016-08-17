@@ -76,7 +76,7 @@ module.exports = {
     'limits': 'Tileset exceeds processing limit.',
     'tiletoobig': 'Tile exceeds maximum size of 0k at z1. Reduce the detail of data at this zoom level or omit it by adjusting your minzoom.',
     'gridtoobig': 'Grid exceeds maximum size of 0k at z1. Reduce the detail of data at this zoom level or omit it by adjusting your minzoom.',
-    'nulltile': 'SQLITE_ERROR: no such column: tile_data',
+    'nulltile': 'Tile is invalid',
     'prepare': 'Source cannot contain prepare key',
     'filetoobig': 'File is larger than 1.02 kB. Too big to process.'
   },
