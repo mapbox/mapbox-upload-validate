@@ -92,7 +92,7 @@ test('lib.validators.mbtiles: no tile_data column', function(t) {
   validate(fixtures.invalid.mbtiles.notiledata, function(err) {
     t.ok(err, 'expected error');
     t.equal(err.code, 'EINVALID', 'expected error code');
-    t.equal(err.message, expected.mbtilesErrors.nulltile, 'expected error message');
+    t.equal(err.message, expected.mbtilesErrors.notiledata, 'expected error message');
     t.end();
   });
 });
