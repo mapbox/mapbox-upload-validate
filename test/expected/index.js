@@ -68,7 +68,7 @@ module.exports = {
   mbtilesErrors: {
     'oldtemplate': 'Use TileMill 0.7 or later to export MBTiles with a valid template.',
     'notadb': 'Unknown filetype',
-    'notiledata': 'No tile data column',
+    'notiledata': 'SQLITE_ERROR: no such column: tile_data',
     'corrupt': '',
     'vector': 'Vector source must include "vector_layers" key',
     'oldcarmen': 'Carmen 0.1.x tilesets are no longer supported.',
@@ -76,7 +76,7 @@ module.exports = {
     'limits': 'Tileset exceeds processing limit.',
     'tiletoobig': 'Tile exceeds maximum size of 0k at z1. Reduce the detail of data at this zoom level or omit it by adjusting your minzoom.',
     'gridtoobig': 'Grid exceeds maximum size of 0k at z1. Reduce the detail of data at this zoom level or omit it by adjusting your minzoom.',
-    'nulltile': 'Tile is invalid',
+    'nulltile': 'SQLITE_ERROR: no such column: tile_data',
     'prepare': 'Source cannot contain prepare key',
     'filetoobig': 'File is larger than 1.02 kB. Too big to process.'
   },
