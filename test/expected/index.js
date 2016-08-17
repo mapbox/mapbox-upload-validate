@@ -68,6 +68,7 @@ module.exports = {
   mbtilesErrors: {
     'oldtemplate': 'Use TileMill 0.7 or later to export MBTiles with a valid template.',
     'notadb': 'Unknown filetype',
+    'notiledata': 'No tile data column',
     'corrupt': '',
     'vector': 'Vector source must include "vector_layers" key',
     'oldcarmen': 'Carmen 0.1.x tilesets are no longer supported.',
