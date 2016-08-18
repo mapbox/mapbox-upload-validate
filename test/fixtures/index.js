@@ -58,6 +58,7 @@ module.exports = {
     'mbtiles': {
       'oldtemplate': path.join(__dirname, 'invalid.mbtiles-template.mbtiles'),
       'notadb': path.join(__dirname, 'invalid.mbtiles-notadb.mbtiles'),
+      'notiledata': path.join(__dirname, 'invalid.mbtiles-notiledata.mbtiles'),
       'vector': path.join(__dirname, 'invalid.mbtiles-vector.mbtiles'),
       'oldcarmen': path.join(__dirname, 'invalid.mbtiles-oldcarmen.mbtiles'),
       'empty': path.join(__dirname, 'invalid.mbtiles-empty.mbtiles'),
