@@ -1,3 +1,7 @@
+## 3.6.0
+
+* Upgrade mapnik-omnivore#8.1.0, tilelive-omnivore@3.1.0, mapbox-file-sniff@0.5.2
+
 ## 3.5.1
 
 * tilelive-omnivore@3.0.0, mapnik-omnivore@8.0.0
