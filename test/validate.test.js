@@ -9,16 +9,16 @@ process.env.MapboxAPIMaps = 'https://api.tiles.mapbox.com';
 
 var validFiletypes = Object.keys(fixtures.valid);
 var validProtocols = validFiletypes.map(function(k) {
-  if (k.indexOf('mbtiles') === 0) return 'mbtiles:';
-  if (k === 'csv') return 'omnivore:';
-  if (k === 'shp') return 'omnivore:';
-  if (k === 'tif') return 'omnivore:';
-  if (k === 'geojson') return 'omnivore:';
-  if (k === 'kml') return 'omnivore:';
-  if (k === 'gpx') return 'omnivore:';
-  if (k === 'tilejson') return 'tilejson:';
-  if (k === 'tm2z') return 'tm2z:';
-  if (k.indexOf('serialtiles') === 0) return 'serialtiles:';
+  if (k.indexOf('mbtiles') === 0) return {protocol: 'mbtiles:', filetype: 'mbtiles'};
+  if (k === 'csv') return {protocol: 'omnivore:', filetype: 'csv'};
+  if (k === 'shp') return {protocol: 'omnivore:', filetype: 'shp'};
+  if (k === 'tif') return {protocol: 'omnivore:', filetype: 'tif'};
+  if (k === 'geojson') return {protocol: 'omnivore:', filetype: 'geojson'};
+  if (k === 'kml') return {protocol: 'omnivore:', filetype: 'kml'};
+  if (k === 'gpx') return {protocol: 'omnivore:', filetype: 'gpx'};
+  if (k === 'tilejson') return {protocol: 'tilejson:', filetype: 'tilejson'};
+  if (k === 'tm2z') return {protocol: 'tm2z:', filetype: 'tm2z'};
+  if (k.indexOf('serialtiles') === 0) return {protocol: 'serialtiles:', filetype: 'serialtiles'};
 });
 
 test('lib.validate.filepath: valid', function(t) {
@@ -48,7 +48,8 @@ test('lib.validate.info: valid', function(t) {
     return expected.info[k];
   });
   validFiletypes.forEach(function(k, i) {
-    q.defer(validate.info, validProtocols[i] + '//' + fixtures.valid[k]);
+    console.log(validProtocols[i]);
+    q.defer(validate.info, validProtocols[i].protocol + '//' + fixtures.valid[k]);
   });
   q.awaitAll(function(err, infos) {
     t.ifError(err, 'does not error on valid files');
