@@ -8,18 +8,20 @@ var testUtils = require('./util');
 process.env.MapboxAPIMaps = 'https://api.tiles.mapbox.com';
 
 var validFiletypes = Object.keys(fixtures.valid);
-var validProtocols = validFiletypes.map(function(k) {
-  if (k.indexOf('mbtiles') === 0) return 'mbtiles:';
-  if (k === 'csv') return 'omnivore:';
-  if (k === 'shp') return 'omnivore:';
-  if (k === 'tif') return 'omnivore:';
-  if (k === 'geojson') return 'omnivore:';
-  if (k === 'kml') return 'omnivore:';
-  if (k === 'gpx') return 'omnivore:';
-  if (k === 'tilejson') return 'tilejson:';
-  if (k === 'tm2z') return 'tm2z:';
-  if (k.indexOf('serialtiles') === 0) return 'serialtiles:';
-});
+var validProtocols = validFiletypes.map(createValidProtocols);
+
+function createValidProtocols(string) {
+  if (string.indexOf('mbtiles') === 0) return {protocol: 'mbtiles:', filetype: 'mbtiles'};
+  if (string === 'csv') return {protocol: 'omnivore:', filetype: 'csv'};
+  if (string === 'shp') return {protocol: 'omnivore:', filetype: 'shp'};
+  if (string === 'tif') return {protocol: 'omnivore:', filetype: 'tif'};
+  if (string === 'geojson') return {protocol: 'omnivore:', filetype: 'geojson'};
+  if (string === 'kml') return {protocol: 'omnivore:', filetype: 'kml'};
+  if (string === 'gpx') return {protocol: 'omnivore:', filetype: 'gpx'};
+  if (string === 'tilejson') return {protocol: 'tilejson:', filetype: 'tilejson'};
+  if (string === 'tm2z') return {protocol: 'tm2z:', filetype: 'tm2z'};
+  if (string.indexOf('serialtiles') === 0) return {protocol: 'serialtiles:', filetype: 'serialtiles'};
+}
 
 test('lib.validate.filepath: valid', function(t) {
   var q = queue();
@@ -48,7 +50,14 @@ test('lib.validate.info: valid', function(t) {
     return expected.info[k];
   });
   validFiletypes.forEach(function(k, i) {
-    q.defer(validate.info, validProtocols[i] + '//' + fixtures.valid[k]);
+    var fileinfo = createValidProtocols(k);
+    var info = {
+      uri: validProtocols[i].protocol + '//' + fixtures.valid[k],
+      filetype: fileinfo.filetype,
+      protocol: validProtocols[i].protocol,
+      filepath: fixtures.valid[k] 
+    };
+    q.defer(validate.info, info);
   });
   q.awaitAll(function(err, infos) {
     t.ifError(err, 'does not error on valid files');
@@ -59,7 +68,13 @@ test('lib.validate.info: valid', function(t) {
 });
 
 test('lib.validate.info: unsupported file', function(t) {
-  validate.info('nonsense://' + fixtures.invalid.unsupported, function(err, info) {
+  var info = {
+    uri: 'nonsense://' + fixtures.invalid.unsupported,
+    filetype: 'txt',
+    protocol: 'nonsense:',
+    filepath: fixtures.invalid.unsupported
+  };
+  validate.info(info, function(err, info) {
     t.ok(err, 'expected error');
     t.equal(err.code, 'EINVALID', 'expected error code');
     t.notOk(info, 'no info returned');
@@ -68,7 +83,13 @@ test('lib.validate.info: unsupported file', function(t) {
 });
 
 test('lib.validate.info: invalid data in the file', function(t) {
-  validate.info('tilejson://' + fixtures.invalid.tilejson.bounds, function(err, info) {
+  var info = {
+    uri: 'tilejson://' + fixtures.invalid.tilejson.bounds,
+    filetype: 'tilejson',
+    protocol: 'tilejson:',
+    filepath: fixtures.invalid.tilejson.bounds
+  };
+  validate.info(info, function(err, info) {
     t.ok(err, 'expected error');
     t.equal(err.code, 'EINVALID', 'expected error code');
     t.notOk(info, 'no info returned');
@@ -77,7 +98,13 @@ test('lib.validate.info: invalid data in the file', function(t) {
 });
 
 test('lib.validate.info: invalid metadata size', function(t) {
-  validate.info('tilejson://' + fixtures.valid.tilejson, { max_metadata: 50 }, function(err) {
+  var info = {
+    uri: 'tilejson://' + fixtures.valid.tilejson,
+    filetype: 'tilejson',
+    protocol: 'tilejson:',
+    filepath: fixtures.valid.tilejson
+  };
+  validate.info(info, { max_metadata: 50 }, function(err) {
     t.ok(err, 'expected error');
     t.equal(err.code, 'EINVALID', 'expected error code');
     t.equal(err.message, 'Metadata exceeds limit of 0.0k.', 'expected error message');
@@ -88,7 +115,7 @@ test('lib.validate.info: invalid metadata size', function(t) {
 test('lib.validate.source: valid', function(t) {
   var q = queue();
   validFiletypes.forEach(function(k, i) {
-    q.defer(validate.source, validProtocols[i] + '//' + fixtures.valid[k]);
+    q.defer(validate.source, validProtocols[i].protocol + '//' + fixtures.valid[k]);
   });
   q.awaitAll(function(err, sources) {
     t.ifError(err, 'does not error on valid files');
@@ -103,7 +130,7 @@ test('lib.validate.source: valid', function(t) {
 });
 
 test('lib.validate.source: unsupported file', function(t) {
-  validate.info('nonsense://' + fixtures.invalid.unsupported, function(err, source) {
+  validate.source('nonsense://' + fixtures.invalid.unsupported, function(err, source) {
     t.ok(err, 'expected error');
     t.equal(err.code, 'EINVALID', 'expected error code');
     t.notOk(source, 'no source returned');
@@ -112,7 +139,14 @@ test('lib.validate.source: unsupported file', function(t) {
 });
 
 test('lib.validate.source: invalid data in the file', function(t) {
-  validate.info('tilejson://' + fixtures.invalid.tilejson.bounds, function(err, source) {
+  //'tilejson://' + fixtures.invalid.tilejson.bounds
+  var info = {
+    uri: 'tilejson://' + fixtures.invalid.tilejson.bounds,
+    filetype: 'tilejson',
+    protocol: 'tilejson:',
+    filepath: fixtures.invalid.tilejson.bounds
+  };
+  validate.info(info, function(err, source) {
     t.ok(err, 'expected error');
     t.equal(err.code, 'EINVALID', 'expected error code');
     t.notOk(source, 'no source returned');

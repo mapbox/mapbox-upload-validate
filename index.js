@@ -14,12 +14,13 @@ module.exports = function(filepath, callback) {
     function() {
       validate.filepath(filepath, this);
     },
-    function(err, protocol) {
+    function(err, fileinfo) {
       if (err) return fail(err);
       results.filepath = filepath;
-      results.protocol = protocol;
-      results.uri = protocol + '//' + filepath;
-      validate.info(results.uri, this);
+      results.protocol = fileinfo.protocol;
+      results.filetype = fileinfo.filetype;
+      results.uri = fileinfo.protocol + '//' + filepath;
+      validate.info(results, this);
     },
     function(err, info) {
       if (err) return fail(err);
