@@ -20,7 +20,8 @@ function validate(filepath, limits, callback) {
       filepath: filepath,
       protocol: 'tilejson:',
       info: expected.info.tilejson,
-      source: source
+      source: source,
+      uri: 'tilejson://' + filepath
     };
     if (limits) opts.limits = limits;
 

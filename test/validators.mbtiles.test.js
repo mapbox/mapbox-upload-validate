@@ -22,7 +22,8 @@ function validate(filepath, limits, callback) {
         filepath: filepath,
         protocol: 'mbtiles:',
         info: info,
-        source: source
+        source: source,
+        uri: 'mbtiles://' + filepath
       };
       if (limits) opts.limits = limits;
       mbtiles(opts, callback);

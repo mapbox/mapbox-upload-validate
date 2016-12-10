@@ -1,9 +1,9 @@
 var test = require('tape').test;
 var validate = require('../lib/validate');
 var fixtures = require('./fixtures');
-var expected = require('./expected');
+//var expected = require('./expected');
 var queue = require('queue-async');
-var testUtils = require('./util');
+//var testUtils = require('./util');
 
 process.env.MapboxAPIMaps = 'https://api.tiles.mapbox.com';
 

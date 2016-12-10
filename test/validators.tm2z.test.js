@@ -19,7 +19,8 @@ function validate(filepath, limits, callback) {
       filepath: filepath,
       protocol: 'tm2z:',
       info: expected.info.tm2z,
-      source: source
+      source: source,
+      uri: 'tm2z://' + filepath
     };
     if (limits) opts.limits = limits;
 

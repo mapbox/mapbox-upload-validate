@@ -22,7 +22,8 @@ function validate(filepath, maxSize, callback) {
       filepath: filepath,
       protocol: 'omnivore:',
       info: expected.info.tilejson,
-      source: source
+      source: source,
+      uri: 'omnivore://' + filepath
     };
     if (maxSize) opts.limits = { max_filesize: maxSize };
     omnivore(opts, callback);

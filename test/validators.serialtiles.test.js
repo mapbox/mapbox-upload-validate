@@ -19,7 +19,8 @@ function validate(filepath, limits, callback) {
       filepath: filepath,
       protocol: 'serialtiles:',
       info: expected.info.tilejson,
-      source: source
+      source: source,
+      uri: 'serialtiles://' + filepath
     };
 
     if (limits) opts.limits = limits;
