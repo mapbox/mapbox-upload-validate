@@ -7,11 +7,11 @@ var fs = require('fs');
 var kml = require('../lib/validators/kml.js');
 
 
-const fixturePath = (fixtureName) => {
-  return path.resolve(__dirname, `./test/fixtures/${fixtureName}`);
+var fixturePath = function (fixtureName) {
+  return path.resolve(__dirname, 'fixtures');
 };
 
-const kmlLayers = (infile) => {
+var kmlLayers = function (infile) {
 
   var ds_kml = '';
   var lyr_cnt = '';
@@ -54,7 +54,7 @@ const kmlLayers = (infile) => {
   return true;
 };
 
-test('[kml] valid kml', (assert) => {
+test('[kml] valid kml', function (assert) {
   var infile = (fixturePath('invalid.kml-duplicate-layers.kml'));
 
   kmlLayers(infile, function(err) {
@@ -63,7 +63,7 @@ test('[kml] valid kml', (assert) => {
   assert.end();
 });
 
-test('[kml] invalid duplicate layers', (assert) => {
+test('[kml] invalid duplicate layers', function (assert) {
   var infile = (fixturePath('invalid.kml-duplicate-layers.kml'));
 
   kmlLayers(infile, function(err) {
@@ -72,3 +72,20 @@ test('[kml] invalid duplicate layers', (assert) => {
       assert.end();
     });
   });
+
+test.only('[kml] invalid excess layers', function (assert) {
+  var infile = (fixturePath('fail-more-than-15-layers.kml'));
+  console.log('hello, are we getting here?');
+    kml(infile, '22', function(err) {
+      console.log(err);
+      assert.ok(err, 'error properly handled');
+      console.log('how about here?');
+      assert.equal(err.message, '22 layers found. Maximum of 15 layers allowed');
+      console.log('maybe here');
+      assert.end(err);
+    });
+});
+
+test('[kml] invalid', function (assert) {
+
+});
