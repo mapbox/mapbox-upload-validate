@@ -8,7 +8,7 @@ var kml = require('../lib/validators/kml.js');
 
 
 var fixturePath = function (fixtureName) {
-  return path.resolve(__dirname, 'fixtures');
+  return path.resolve(__dirname,'fixtures', fixtureName);
 };
 
 var kmlLayers = function (infile) {
@@ -55,37 +55,36 @@ var kmlLayers = function (infile) {
 };
 
 test('[kml] valid kml', function (assert) {
-  var infile = (fixturePath('invalid.kml-duplicate-layers.kml'));
-
+  var infile = (fixturePath('ok-layers-folders-emptygeometries.kml'));
   kmlLayers(infile, function(err) {
-    assert.equal(null, err.message);
+
+    assert.end();
   });
-  assert.end();
 });
 
 test('[kml] invalid duplicate layers', function (assert) {
   var infile = (fixturePath('invalid.kml-duplicate-layers.kml'));
 
   kmlLayers(infile, function(err) {
-      assert.equal(err.message, 'Duplicate layer names: \'duplicate layer name\' found 2 times, \'layer 2\' found 2 times', 'expected error message');
-      assert.equal(err, duplicate_lyr_msg, 'too many layers');
-      assert.end();
-    });
+    t.equal(err.message, 'No duplicate layers allowed.', 'expected error message');
+    assert.end(err);
   });
+});
 
-test.only('[kml] invalid excess layers', function (assert) {
+test('[kml] invalid too many layers', function (assert) {
   var infile = (fixturePath('fail-more-than-15-layers.kml'));
-  console.log('hello, are we getting here?');
-    kml(infile, '22', function(err) {
-      console.log(err);
-      assert.ok(err, 'error properly handled');
-      console.log('how about here?');
-      assert.equal(err.message, '22 layers found. Maximum of 15 layers allowed');
-      console.log('maybe here');
-      assert.end(err);
-    });
+  kmlLayers(infile, function(err) {
+    t.ok(err, 'error properly handled');
+    t.equal(err.message, '22 layers found. Maximum of 15 layers allowed.', 'expected error message');
+    assert.end(err);
+  });
 });
 
 test('[kml] invalid', function (assert) {
-
+  var infile = (fixturePath('invalid.kml-fail.kml'));
+  kmlLayers(infile, function(err) {
+    t.ok(err, 'error properly handled');
+    t.equal(err.message, 'KML does not contain any layers.', 'expected error message');
+    assert.end(err);
+  });
 });
