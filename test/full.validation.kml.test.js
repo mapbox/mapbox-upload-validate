@@ -1,9 +1,5 @@
 var test = require('tape').test;
-var fixtures = require('./fixtures');
-var validate = require('..');
 var path = require('path');
-var os = require('os');
-var fs = require('fs');
 var kml = require('../lib/validators/kml.js');
 
 
@@ -19,7 +15,7 @@ test('[kml] valid kml', function (assert) {
 
 test('[kml] invalid duplicate layers', function (assert) {
   var infile = (fixturePath('invalid.kml-duplicate-layers.kml'));
-    assert.notEqual(kml(infile), 'No duplicate layers allowed.', 'expected error message');
+    assert.equal(kml(infile), 'layers ' + kml.lyr_name + ' occurs ' + kml.lyr_name_cnt + ' times.', 'expected error message');
     assert.end();
 });
 
