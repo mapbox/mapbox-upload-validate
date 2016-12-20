@@ -15,7 +15,7 @@ test('[kml] valid kml', function (assert) {
 
 test('[kml] invalid duplicate layers', function (assert) {
   var infile = (fixturePath('invalid.kml-duplicate-layers.kml'));
-    assert.equal(kml(infile), 'layers ' + kml.lyr_name + ' occurs ' + kml.lyr_name_cnt + ' times.', 'expected error message');
+    assert.equal(kml(infile), 'Duplicate layer names:' + kml.msg, 'expected error message');
     assert.end();
 });
 

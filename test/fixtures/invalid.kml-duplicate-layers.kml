@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
 <Folder>
-	<name>duplicate layer names</name>
+	<name>foo layer</name>
 	<open>1</open>
 	<Folder>
-		<name>duplicate layer name</name>
+		<name>foo layer</name>
 	</Folder>
 	<Folder>
-		<name>duplicate layer name</name>
+		<name>foo layer</name>
 	</Folder>
 	<Folder>
-		<name>layer 2</name>
+		<name>bar layer</name>
 	</Folder>
 	<Folder>
-		<name>layer 2</name>
+		<name>bar layer</name>
 	</Folder>
 </Folder>
 </kml>

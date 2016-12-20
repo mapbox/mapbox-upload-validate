@@ -1,0 +1,22 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/atlas/.nvm/versions/node/v4.0.0/bin/node',
+1 verbose cli   '/Users/atlas/.nvm/versions/node/v4.0.0/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'lint' ]
+2 info using npm@2.15.10
+3 info using node@v4.0.0
+4 verbose stack Error: missing script: lint
+4 verbose stack     at run (/Users/atlas/.nvm/versions/node/v4.0.0/lib/node_modules/npm/lib/run-script.js:142:19)
+4 verbose stack     at /Users/atlas/.nvm/versions/node/v4.0.0/lib/node_modules/npm/lib/run-script.js:58:5
+4 verbose stack     at /Users/atlas/.nvm/versions/node/v4.0.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:356:5
+4 verbose stack     at handleExists (/Users/atlas/.nvm/versions/node/v4.0.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:329:20)
+4 verbose stack     at FSReqWrap.cb [as oncomplete] (fs.js:212:19)
+5 verbose cwd /Users/atlas/dev-stuff/mapbox-upload-validate
+6 error Darwin 14.1.1
+7 error argv "/Users/atlas/.nvm/versions/node/v4.0.0/bin/node" "/Users/atlas/.nvm/versions/node/v4.0.0/bin/npm" "run" "lint"
+8 error node v4.0.0
+9 error npm  v2.15.10
+10 error missing script: lint
+11 error If you need help, you may report this error at:
+11 error     <https://github.com/npm/npm/issues>
+12 verbose exit [ 1, true ]
