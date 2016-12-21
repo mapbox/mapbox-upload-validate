@@ -1,3 +1,7 @@
+## 3.7.1
+
+* Add tests for updated KML validation from 3.7.0.
+
 ## 3.7.0
 
 * Add KML validation prior to passing into mapnik/gdal drivers to prevent burning computers
