@@ -1,5 +1,5 @@
 {
-  "name": "mapbox-upload-validate",
+  "name": "@mapbox/mapbox-upload-validate",
   "version": "3.7.1",
   "description": "Validate that a file can be uploaded to Mapbox",
   "main": "index.js",
