@@ -1,3 +1,7 @@
+## 3.7.2
+
+* Add namespaced onivores and add z23 bump
+
 ## 3.7.1
 
 * Add tests for updated KML validation from 3.7.0.
