@@ -1,37 +1,35 @@
 {
-  "filename": "DC_polygon.geo",
-  "filetype": ".geojson",
-  "dstype": "geojson",
-  "filesize": 1082,
-  "center": [
-    -77.01335,
-    38.89255
+  "vector_layers": [
+    {
+      "id": "DC_polygon.geo",
+      "description": "",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "fields": {
+        "kind": "String",
+        "name": "String",
+        "state": "String"
+      }
+    }
   ],
-  "extent": [
+  "bounds": [
     -77.1174,
     38.7912,
     -76.9093,
     38.9939
   ],
+  "center": [
+    -77.01335,
+    38.89255,
+    0
+  ],
+  "format": "pbf",
+  "maxzoom": 6,
   "minzoom": 0,
-  "maxzoom": 7,
-  "projection": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
-  "json": {
-    "vector_layers": [
-      {
-        "id": "DC_polygon.geo",
-        "description": "",
-        "minzoom": 0,
-        "maxzoom": 22,
-        "fields": {
-          "kind": "String",
-          "name": "String",
-          "state": "String"
-        }
-      }
-    ]
-  },
-  "layers": [
-    "DC_polygon.geo"
-  ]
+  "id": null,
+  "name": "",
+  "description": "",
+  "version": "1.0.0",
+  "legend": null,
+  "scheme": "xyz"
 }
