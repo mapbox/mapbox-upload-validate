@@ -23,7 +23,7 @@
   "homepage": "https://github.com/mapbox/mapbox-upload-validate",
   "dependencies": {
     "@mapbox/mapnik-omnivore": "https://github.com/mapbox/mapnik-omnivore/tarball/more-features",
-    "@mapbox/tilelive-omnivore": "https://github.com/mapbox/tilelive-omnivore/tarball/more-features",
+    "@mapbox/tilelive-omnivore": "~3.1.0",
     "@mapbox/tilelive-vector": "~3.9.3",
     "gdal": "~0.9.3",
     "mapbox-file-sniff": "~0.5.2",
