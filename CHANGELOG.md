@@ -1,6 +1,7 @@
 ## 3.7.1
 
 * Add tests for updated KML validation from 3.7.0.
+* Move to @mapbox/mapbox-upload-validate namespace
 
 ## 3.7.0
 
