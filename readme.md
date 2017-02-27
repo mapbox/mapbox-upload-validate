@@ -9,7 +9,7 @@ Validate that a file can be uploaded to Mapbox
 ## Install
 
 ```sh
-$ npm install -g mapbox-upload-validate
+$ npm install -g @mapbox/mapbox-upload-validate
 ```
 
 ## Usage
