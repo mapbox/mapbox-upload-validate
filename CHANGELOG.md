@@ -1,3 +1,9 @@
+## 3.8.0
+
+* Update mapnik-omnivore@8.3.0
+* Update tilelive-omnivore#3.2.0
+* Update mapbox-file-sniff@1.0.0
+
 ## 3.7.2
 
 * Add namespaced onivores and add z23 bump
