@@ -1,3 +1,10 @@
+## 3.9.0
+
+* Upgraded to use mapnik 3.6.0, along with relevant deps:
+  * mapnik-omnivore@8.4.0
+  * tilelive-omnivore@3.3.0
+  * tilelive-vector@3.10.0
+
 ## 3.8.0
 
 * Update mapnik-omnivore@8.3.0
