@@ -1,3 +1,7 @@
+## 3.10.0
+
+* Updated version of tilelive and other depdencies to the latest mapbox npm namespace 
+
 ## 3.9.0
 
 * Upgraded to use mapnik 3.6.0, along with relevant deps:
