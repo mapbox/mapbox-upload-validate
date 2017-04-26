@@ -2,7 +2,7 @@ var test = require('tape').test;
 var fixtures = require('./fixtures');
 var expected = require('./expected');
 var serialtiles = require('../lib/validate').serialtiles;
-var tilelive = require('tilelive');
+var tilelive = require('@mapbox/tilelive');
 
 process.env.MapboxAPIMaps = 'https://api.tiles.mapbox.com';
 
