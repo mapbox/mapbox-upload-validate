@@ -6,10 +6,6 @@ node_js:
   - "4"
   - "6.10.0"
 
-env:
-  global:
-    secure: C6IoK0qKopK5m7f0qx8nDkP44VzCnABwSgKV8bWGTDqfrXKWkk4Zi7XD9of4IQtL87ALP6zgSoJMzNshH39K5VXqb10yLf8KessQQhyIy+3iGPkVo0J4aEkLv8wvHpRqFlthJCMCjQivVkEB9Z7pTGy37zUZJ7RAk0op8TyvAUw=
-
 addons:
   apt:
     sources:
