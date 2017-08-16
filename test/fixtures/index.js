@@ -22,7 +22,8 @@ module.exports = {
     'mbtiles-update2': path.join(__dirname, 'valid-update2.mbtiles'),
     'mbtiles-vector': path.join(__dirname, 'valid-vector.mbtiles'),
     'mbtiles-vectorgzip': path.join(__dirname, 'valid-vectorgzip.mbtiles'),
-    'mbtiles-webp': path.join(__dirname, 'valid-webp.mbtiles')
+    'mbtiles-webp': path.join(__dirname, 'valid-webp.mbtiles'),
+    'mbtiles-tilestats': path.join(__dirname, 'valid-tilestats-metadata.mbtiles')
   },
   invalid: {
     'unsupported': path.join(__dirname, 'invalid.unsupported.txt'),

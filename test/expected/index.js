@@ -22,7 +22,8 @@ module.exports = {
     'mbtiles-update2': require('./valid.mbtiles.update2.info.json'),
     'mbtiles-vector': require('./valid.mbtiles.vector.info.json'),
     'mbtiles-vectorgzip': require('./valid.mbtiles.vectorgzip.info.json'),
-    'mbtiles-webp': require('./valid.mbtiles.webp.info.json')
+    'mbtiles-webp': require('./valid.mbtiles.webp.info.json'),
+    'mbtiles-tilestats': require('./valid.mbtiles.tilestats.info.json')
   },
   tm2zErrors: {
     'doublezip': 'Unknown filetype',

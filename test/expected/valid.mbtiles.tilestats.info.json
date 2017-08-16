@@ -1,0 +1,36 @@
+{
+  "scheme": "tms",
+  "basename": "valid-tilestats-metadata.mbtiles",
+  "id": "valid-tilestats-metadata",
+  "filesize": 36864,
+  "name": "test/fixtures/tilestats-metadata.mbtiles",
+  "description": "test/fixtures/tilestats-metadata.mbtiles",
+  "version": "2",
+  "minzoom": 0,
+  "maxzoom": 14,
+  "center": [
+    -144.492188,
+    84.372643,
+    14
+  ],
+  "bounds": [
+    -144.492188,
+    -73.627789,
+    138.515625,
+    84.474065
+  ],
+  "type": "overlay",
+  "format": "pbf",
+  "vector_layers": [
+    {
+      "id": "fourpointsgeojson",
+      "description": "",
+      "minzoom": 0,
+      "maxzoom": 14,
+      "fields": {
+        "color": "String"
+      }
+    }
+  ],
+  "legend": null
+}
