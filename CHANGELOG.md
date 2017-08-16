@@ -1,6 +1,10 @@
+## 3.10.1
+
+* Remove `tilestats` object from the metadata returned from tilelive.info before performing maximum size check. [#81](https://github.com/mapbox/mapbox-upload-validate/pull/81)
+
 ## 3.10.0
 
-* Updated version of tilelive and other depdencies to the latest mapbox npm namespace 
+* Updated version of tilelive and other depdencies to the latest mapbox npm namespace
 
 ## 3.9.0
 
