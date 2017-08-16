@@ -55,7 +55,7 @@ test('lib.validate.info: valid', function(t) {
       uri: validProtocols[i].protocol + '//' + fixtures.valid[k],
       filetype: fileinfo.filetype,
       protocol: validProtocols[i].protocol,
-      filepath: fixtures.valid[k] 
+      filepath: fixtures.valid[k]
     };
     q.defer(validate.info, info);
   });
@@ -108,6 +108,22 @@ test('lib.validate.info: invalid metadata size', function(t) {
     t.ok(err, 'expected error');
     t.equal(err.code, 'EINVALID', 'expected error code');
     t.equal(err.message, 'Metadata exceeds limit of 0.0k.', 'expected error message');
+    t.end();
+  });
+});
+
+test('lib.validate.info: valid metadata size when pre-generated tilestats object exists in mbtiles', function(t) {
+  var info = {
+    uri: 'mbtiles://' + fixtures.valid['mbtiles-tilestats'],
+    filetype: 'mbtiles',
+    protocol: 'mbtiles:',
+    filepath: fixtures.valid['mbtiles-tilestats']
+  };
+
+  // full length of metadata table without tilestats is 509 
+  validate.info(info, { max_metadata: 509 }, function(err, info) {
+    t.notOk(err, 'no error');
+    t.deepEqual(info, expected.info['mbtiles-tilestats'], 'info is equal');
     t.end();
   });
 });
