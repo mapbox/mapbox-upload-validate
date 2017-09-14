@@ -1,3 +1,7 @@
+## 3.11.0
+
+* Update tilelive-omnivore 3.4.0
+
 ## 3.10.1
 
 * Remove `tilestats` object from the metadata returned from tilelive.info before performing maximum size check. [#81](https://github.com/mapbox/mapbox-upload-validate/pull/81)
