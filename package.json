@@ -23,7 +23,7 @@
   "homepage": "https://github.com/mapbox/mapbox-upload-validate",
   "dependencies": {
     "@mapbox/mapnik-omnivore": "~8.4.0",
-    "@mapbox/tilelive-omnivore": "~3.4.0",
+    "@mapbox/tilelive-omnivore": "mapbox/tilelive-omnivore#cfe38f2e0bed4b555503e27ea0cb649bfb59ec70",
     "@mapbox/tilelive-vector": "~3.10.0",
     "@mapbox/mapbox-file-sniff": "~1.0.0",
     "gdal": "~0.9.3",
