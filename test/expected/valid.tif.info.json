@@ -8,11 +8,11 @@
   "center": [
     -110.324799,
     44.565022,
-    9
+    0
   ],
   "format": "webp",
   "maxzoom": 15,
-  "minzoom": 9,
+  "minzoom": 0,
   "id": null,
   "name": "",
   "description": "",
