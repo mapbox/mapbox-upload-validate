@@ -1,3 +1,8 @@
+## 3.12.0
+
+* Update tilelive-omnivore@3.5.0
+* Update mapnik-omnivore@8.5.0
+
 ## 3.11.0
 
 * Update tilelive-omnivore 3.4.0
