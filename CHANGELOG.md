@@ -1,9 +1,10 @@
-## 3.13.0
+## 4.0.0
 
-* Update tilelive-omnivore@3.6.0
-* Update mapnik-omnivore@8.6.0
-* Update tilelive-vector@3.11.0
+* Update tilelive-omnivore@4.0.0
+* Update mapnik-omnivore@9.0.0
+* Update tilelive-vector@4.0.0
 * Update mapnik to 3.7.0
+* Drops window support
 
 ## 3.12.0
 
