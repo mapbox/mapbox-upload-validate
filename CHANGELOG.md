@@ -1,3 +1,7 @@
+## 4.0.1
+
+* Revert https://github.com/mapbox/mapbox-upload-validate/pull/84
+
 ## 4.0.0
 
 * Update tilelive-omnivore@4.0.0
