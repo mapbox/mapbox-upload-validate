@@ -1,0 +1,6 @@
+{
+    "max_filesize": 2,
+    "max_tilesize": 3,
+    "max_gridsize": 4,
+    "max_totalitems": 5
+}
