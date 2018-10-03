@@ -1,6 +1,6 @@
 {
   "name": "@mapbox/mapbox-upload-validate",
-  "version": "4.1.0",
+  "version": "4.1.1-dev",
   "description": "Validate that a file can be uploaded to Mapbox",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/mapbox/mapbox-upload-validate",
   "dependencies": {
-    "@mapbox/mapnik-omnivore": "~9.0.0",
+    "@mapbox/mapnik-omnivore": "9.0.1-dev",
     "@mapbox/tilelive-omnivore": "~4.1.0",
     "@mapbox/tilelive-vector": "~4.0.0",
     "@mapbox/mapbox-file-sniff": "~1.0.0",
