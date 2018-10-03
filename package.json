@@ -42,14 +42,15 @@
     "underscore": "^1.7.0"
   },
   "devDependencies": {
+    "@mapbox/duplicate-module-test": "^0.1.0",
+    "coveralls": "~2.11.2",
+    "eslint": "~1.00.0",
+    "eslint-config-unstyled": "^1.1.0",
+    "istanbul": "~0.3.17",
     "jshint": "^2.6.3",
     "mapnik-test-data": "http://mapbox-npm.s3.amazonaws.com/package/mapnik-test-data-2.0.3-fece0a9c546074a1479e9eae2333184029bb2279.tgz",
     "mock-fs": "^3.8.0",
-    "tape": "^3.0.1",
-    "istanbul": "~0.3.17",
-    "coveralls": "~2.11.2",
-    "eslint": "~1.00.0",
-    "eslint-config-unstyled": "^1.1.0"
+    "tape": "^3.0.1"
   },
   "jshintConfig": {
     "node": true,
