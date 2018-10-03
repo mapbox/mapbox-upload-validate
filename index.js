@@ -1,10 +1,14 @@
 var validate = require('./lib/validate');
 var Step = require('step');
+var path = require('path')
 
 module.exports = function(filepath, callback) {
   var results = {};
 
   function fail(err) {
+    if (err.message.indexOf('Mapnik') > -1 && path.extname(filepath) === '.tif'){
+      return callback();
+    }
     err = err || new Error('Any unspecified error was encountered');
     if (err && err.code === 'EINVALID') return callback(null, false, err.message);
     return callback(err);
