@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "pretest": "jshint bin lib test",
-    "test": "eslint index.js lib && tape test/*.test.js",
+    "test": "eslint index.js lib && duplicate-module-test mapnik @mapbox/tilelive && tape test/*.test.js",
     "coverage": "istanbul cover tape test/*.js && coveralls < ./coverage/lcov.info"
   },
   "bin": {
