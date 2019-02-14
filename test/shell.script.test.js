@@ -14,7 +14,8 @@ test('bin.mapbox-upload-validate: invalid', function(t) {
       reason = undefined;
     }
 
-    exec([run, filepath].join(' '), function(err, stdout, stderr) {
+    exec(['NODE_NO_WARNINGS=1', run, filepath].join(' '), function(err, stdout, stderr) {
+      console.log('# bin.mapbox-upload-validate: invalid', path.basename(filepath));
       t.equal(err.code, 3, 'exit 3');
       t.equal(stdout, '', [type, reason].join('.') + ': nothing logged to stdout');
       var expect = expected[type + 'Errors'];
@@ -41,8 +42,9 @@ test('bin.mapbox-upload-validate: valid', function(t) {
   var q = queue();
   Object.keys(fixtures.valid).forEach(function(k) {
     q.defer(function(callback) {
-      exec([run, fixtures.valid[k]].join(' '), function(err, stdout, stderr) {
+      exec(['NODE_NO_WARNINGS=1', run, fixtures.valid[k]].join(' '), function(err, stdout, stderr) {
         if (err) throw err;
+        console.log('# bin.mapbox-upload-validate: valid:', path.basename(fixtures.valid[k]));
         t.equal(stdout, fixtures.valid[k] + '\n', k + ': stdout contains filepath');
         t.notOk(stderr, k + ': no error message');
         callback();
