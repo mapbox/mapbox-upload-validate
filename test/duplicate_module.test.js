@@ -5,12 +5,20 @@ var count_module = function(name,callback) {
   var cmd = 'npm ls ' + name;
   exec(cmd,
     function (error, stdout) {
-      var pattern = new RegExp(name+'@','g');
+      var pattern = new RegExp(name+'@.+ ','g');
       var match = stdout.match(pattern);
       if (!match) {
         return callback(null,0);
       }
-      return callback(null,match.length);
+      // filter matching versions
+      var uniqueVersions = [];
+      for(var i = 0; i < match.length; i++) {
+        var version = match[i].split('@')[1].trim();
+        if(uniqueVersions.indexOf(version) === -1) {
+          uniqueVersions.push(version);
+        }
+      }
+      return callback(null,uniqueVersions.length);
   });
 };
 ['mapnik', 'tilelive'].forEach(function(mod) {

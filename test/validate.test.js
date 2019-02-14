@@ -97,6 +97,30 @@ test('lib.validate.info: invalid data in the file', function(t) {
   });
 });
 
+test('lib.validate.info: max metadata override: success', function(t) {
+  process.env.LIMITS_MAX_METADATA = 1024 * 1024 * 60;
+  clearFromCache(t);
+  validate = require('../lib/validate');
+  t.equal(validate.limits.max_metadata, +process.env.LIMITS_MAX_METADATA);
+  t.end();
+});
+
+test('lib.validate.info: max metadata override: malformed', function(t) {
+  process.env.LIMITS_MAX_METADATA = '62914560b';
+  clearFromCache(t);
+  validate = require('../lib/validate');
+  t.equal(validate.limits.max_metadata, validate.limits._defaults.max_metadata);
+  t.end();
+});
+
+test('lib.validate.info: max metadata override: not defined', function(t) {
+  delete process.env.LIMITS_MAX_METADATA;
+  clearFromCache(t);
+  validate = require('../lib/validate');
+  t.equal(validate.limits.max_metadata, validate.limits._defaults.max_metadata);
+  t.end();
+});
+
 test('lib.validate.info: invalid metadata size', function(t) {
   var info = {
     uri: 'tilejson://' + fixtures.valid.tilejson,
@@ -107,7 +131,7 @@ test('lib.validate.info: invalid metadata size', function(t) {
   validate.info(info, { max_metadata: 50 }, function(err) {
     t.ok(err, 'expected error');
     t.equal(err.code, 'EINVALID', 'expected error code');
-    t.equal(err.message, 'Metadata exceeds limit of 0.0k.', 'expected error message');
+    t.equal(err.message, 'Metadata 293 B exceeds limit of 50 B.', 'expected error message');
     t.end();
   });
 });
@@ -120,7 +144,7 @@ test('lib.validate.info: valid metadata size when pre-generated tilestats object
     filepath: fixtures.valid['mbtiles-tilestats']
   };
 
-  // full length of metadata table without tilestats is 509 
+  // full length of metadata table without tilestats is 509
   validate.info(info, { max_metadata: 509 }, function(err, info) {
     t.notOk(err, 'no error');
     t.deepEqual(info, expected.info['mbtiles-tilestats'], 'info is equal');
@@ -169,3 +193,17 @@ test('lib.validate.source: invalid data in the file', function(t) {
     t.end();
   });
 });
+
+var clearFromCache = function(t) {
+    var k;
+    for(var loadedModule in require.cache) {
+        if(loadedModule.endsWith('mapbox-upload-validate/lib/validate.js')) {
+            k = loadedModule;
+            break;
+        }
+    }
+    t.ok(k, 'require cache cleared');
+    if(k) {
+        delete require.cache[k];
+    }
+};

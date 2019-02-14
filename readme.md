@@ -12,6 +12,11 @@ Validate that a file can be uploaded to Mapbox
 $ npm install -g @mapbox/mapbox-upload-validate
 ```
 
+## Configuration
+
+By default file metadata has a 60.0Kb limit. You can override this value with the `LIMITS_MAX_METADATA` environment variable. See https://github.com/mapbox/mapbox-upload-limits for additional configuration.
+
+
 ## Usage
 
 ```sh
