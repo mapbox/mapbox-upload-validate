@@ -1,3 +1,7 @@
+## 4.4.0
+
+* Update to node v10, allow for mapnikd 4.x installations [#99](https://github.com/mapbox/mapbox-upload-validate/pull/99)
+
 ## 4.1.0
 
 * Update tilelive-omnivore 4.1.0
