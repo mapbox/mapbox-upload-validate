@@ -1,6 +1,3 @@
-
-var is_node_4_or_above = (+process.versions.node[0] >= 4);
-
 module.exports = {
   info: {
     'csv': require('./valid.csv.info.json'),
@@ -33,7 +30,7 @@ module.exports = {
     'malformed': 'expected < at line 1',
     'missingfont': 'Failed to find font face \'This Is A Missing Font\' in style \'country_label\' in TextSymbolizer',
     'missingimage': 'file could not be found: \'invalid.tm2z-missing-image.tm2z/img/ice.jpg\' in style \'water\' in PolygonPatternSymbolizer',
-    'nodirectory': is_node_4_or_above ? 'EISDIR: illegal operation on a directory, open \'invalid.tm2z-nodirectory.tm2z/\'' : 'EISDIR, open \'invalid.tm2z-nodirectory.tm2z/\'',
+    'nodirectory': 'EISDIR',
     'xmlsize': 'Unzipped project.xml size should not exceed 750KB.',
     'metadatasize': 'Metadata exceeds limit of 0.0k.',
     'maxdrawtime': 'At least one tile exceeds the draw time limit of 1ms. Please optimize your styles.',
