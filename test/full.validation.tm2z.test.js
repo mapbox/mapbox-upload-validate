@@ -13,7 +13,7 @@ test('full tm2z validation: invalid', function(t) {
       validate(fixtures.invalid.tm2z[k], function(err, valid, message) {
         t.ifError(err, 'no error');
         t.notOk(valid, 'is not valid');
-        t.equal(message, expected.tm2zErrors[k], 'expected message');
+        t.ok(message.includes(expected.tm2zErrors[k]), 'expected message');
         callback();
       });
     });
