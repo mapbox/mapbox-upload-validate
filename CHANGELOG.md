@@ -1,3 +1,7 @@
+## 4.5.0
+
+* Updated mapnik omnivore version supported
+
 ## 4.4.0
 
 * Update to node v10, allow for mapnikd 4.x installations [#99](https://github.com/mapbox/mapbox-upload-validate/pull/99)
