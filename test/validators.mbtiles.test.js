@@ -124,3 +124,21 @@ test('lib.validators.mbtiles: file too big', function(t) {
   });
 });
 
+test('lib.validators.mbtiles: tile maxzoom too big', function(t) {
+  validate(fixtures.valid['mbtiles-onlytiles'], { max_zoomlevel: 0 }, function(err) {
+    t.ok(err, 'expected error');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    t.equal(err.message, expected.mbtilesErrors.zoomleveltoobig, 'expected error message');
+    t.end();
+  });
+});
+
+test('lib.validators.mbtiles: grid maxzoom too big', function(t) {
+  validate(fixtures.valid['mbtiles-onlygrids'], { max_zoomlevel: 0 }, function(err) {
+    t.ok(err, 'expected error');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    t.equal(err.message, expected.mbtilesErrors.zoomleveltoobig, 'expected error message');
+    t.end();
+  });
+});
+
