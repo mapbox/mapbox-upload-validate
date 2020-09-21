@@ -1,3 +1,7 @@
+## 4.6.0
+
+* Added validation for a maximum possible zoom level in mbtiles
+
 ## 4.5.0
 
 * Updated mapnik omnivore version supported
