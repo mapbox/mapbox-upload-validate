@@ -1,6 +1,6 @@
 {
   "name": "@mapbox/mapbox-upload-validate",
-  "version": "4.5.0",
+  "version": "4.6.0",
   "description": "Validate that a file can be uploaded to Mapbox",
   "main": "index.js",
   "scripts": {
@@ -34,7 +34,7 @@
     "gdal": "^0.9.9",
     "mapbox-studio-default-fonts": "https://mapbox-npm.s3.amazonaws.com/package/mapbox-studio-default-fonts-0.0.4-4afb5235f457bd1c1a5a70fce6c2aa83bf7a851e.tgz",
     "mapbox-studio-pro-fonts": "https://mapbox-npm.s3.amazonaws.com/package/mapbox-studio-pro-fonts-1.0.0-9870a90b713f307b9391829602f4d5857e419615.tgz",
-    "mapbox-upload-limits": "^1.4.1",
+    "mapbox-upload-limits": "^1.4.2",
     "mapnik": "4.x || 3.x",
     "pretty-bytes": "^3.0.0",
     "queue-async": "^1.0.7",

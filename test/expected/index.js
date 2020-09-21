@@ -76,7 +76,8 @@ module.exports = {
     'gridtoobig': 'Grid exceeds maximum size of 0k at z1. Reduce the detail of data at this zoom level or omit it by adjusting your minzoom.',
     'nulltile': 'Tile is invalid',
     'prepare': 'Source cannot contain prepare key',
-    'filetoobig': 'File is larger than 1.02 kB. Too big to process.'
+    'filetoobig': 'File is larger than 1.02 kB. Too big to process.',
+    'zoomleveltoobig': 'Maxzoom exceeded for mbtiles file. There is a max zoom limit of 0 but tiles up to zoom level 1 were found. If you need support for 1cm tilesets please reach out to support.'
   },
   unsupportedErrors: 'Unknown filetype'
 };
