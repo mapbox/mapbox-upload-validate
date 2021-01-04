@@ -1,10 +1,8 @@
-'use strict';
-
-const validate = require('./lib/validate');
-const Step = require('step');
+var validate = require('./lib/validate');
+var Step = require('step');
 
 module.exports = function(filepath, callback) {
-  const results = {};
+  var results = {};
 
   function fail(err) {
     err = err || new Error('Any unspecified error was encountered');
@@ -34,7 +32,7 @@ module.exports = function(filepath, callback) {
       results.source = source;
       validate[results.protocol.slice(0,-1)](results, this);
     },
-    (err) => {
+    function(err) {
       if (err) return fail(err);
       callback(null, true);
     }
