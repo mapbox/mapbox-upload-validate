@@ -20,7 +20,6 @@ module.exports = {
     'mbtiles-tilesgrids': path.join(__dirname, 'valid-tilesgrid.mbtiles'),
     'mbtiles-update1': path.join(__dirname, 'valid-update1.mbtiles'),
     'mbtiles-update2': path.join(__dirname, 'valid-update2.mbtiles'),
-    'mbtiles-vector': path.join(__dirname, 'valid-vector.mbtiles'),
     'mbtiles-vectorgzip': path.join(__dirname, 'valid-vectorgzip.mbtiles'),
     'mbtiles-webp': path.join(__dirname, 'valid-webp.mbtiles'),
     'mbtiles-tilestats': path.join(__dirname, 'valid-tilestats-metadata.mbtiles')
@@ -57,6 +56,7 @@ module.exports = {
       'kmllayers': path.join(__dirname, 'invalid.omnivore.toomanylayers.kml')
     },
     'mbtiles': {
+      'metadata-maxzoom-beyond-tiles': path.join(__dirname, 'invalid-vector-metadata-maxzoom-beyond-tiles.mbtiles'),
       'oldtemplate': path.join(__dirname, 'invalid.mbtiles-template.mbtiles'),
       'notadb': path.join(__dirname, 'invalid.mbtiles-notadb.mbtiles'),
       'notiledata': path.join(__dirname, 'invalid.mbtiles-notiledata.mbtiles'),

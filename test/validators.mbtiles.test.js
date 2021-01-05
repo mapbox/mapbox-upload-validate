@@ -142,3 +142,12 @@ test('lib.validators.mbtiles: grid maxzoom too big', function(t) {
   });
 });
 
+test('lib.validators.mbtiles: metadata maxzoom beyond tiles', function(t) {
+  validate(fixtures.invalid.mbtiles['metadata-maxzoom-beyond-tiles'], function(err) {
+    t.ok(err, 'expected error');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    t.equal(err.message, 'In mbtiles file, metadata.maxzoom (4) is higher than actual tiles maxzoom (2)', 'expected error message');
+    t.end();
+  });
+});
+
