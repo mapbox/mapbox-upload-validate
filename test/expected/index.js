@@ -64,6 +64,7 @@ module.exports = {
     'kmllayers': '16 layers found. Maximum of 15 layers allowed.'
   },
   mbtilesErrors: {
+    'metadata_maxzoom_beyond_tiles': 'In mbtiles file, metadata.maxzoom (4) is higher than actual tiles maxzoom (2)',
     'oldtemplate': 'Use TileMill 0.7 or later to export MBTiles with a valid template.',
     'notadb': 'Unknown filetype',
     'notiledata': 'SQLITE_ERROR: no such column: tile_data',

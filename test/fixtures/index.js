@@ -56,7 +56,7 @@ module.exports = {
       'kmllayers': path.join(__dirname, 'invalid.omnivore.toomanylayers.kml')
     },
     'mbtiles': {
-      'metadata-maxzoom-beyond-tiles': path.join(__dirname, 'invalid-vector-metadata-maxzoom-beyond-tiles.mbtiles'),
+      'metadata_maxzoom_beyond_tiles': path.join(__dirname, 'invalid-vector-metadata-maxzoom-beyond-tiles.mbtiles'),
       'oldtemplate': path.join(__dirname, 'invalid.mbtiles-template.mbtiles'),
       'notadb': path.join(__dirname, 'invalid.mbtiles-notadb.mbtiles'),
       'notiledata': path.join(__dirname, 'invalid.mbtiles-notiledata.mbtiles'),
