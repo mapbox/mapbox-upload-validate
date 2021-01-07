@@ -65,6 +65,9 @@ module.exports = {
   },
   mbtilesErrors: {
     'metadata_maxzoom_beyond_tiles': 'In mbtiles file, metadata.maxzoom (4) is higher than actual tiles maxzoom (2)',
+    'metadata_maxzoom_below_tiles': 'In mbtiles file, metadata.maxzoom (0) is lower than actual tiles minzoom (1)',
+    'metadata_fillzoom_beyond_tiles': 'In mbtiles file, metadata.fillzoom (3) is higher than actual tiles maxzoom (2)',
+    'metadata_fillzoom_below_tiles': 'In mbtiles file, metadata.fillzoom (0) is lower than actual tiles minzoom (1)',
     'oldtemplate': 'Use TileMill 0.7 or later to export MBTiles with a valid template.',
     'notadb': 'Unknown filetype',
     'notiledata': 'SQLITE_ERROR: no such column: tile_data',
