@@ -12,12 +12,12 @@ module.exports = {
     'serialtiles_png': require('./valid.serialtiles_png.info.json'),
     'serialtiles_pbf': require('./valid.serialtiles_pbf.info.json'),
     'mbtiles-carmen2': require('./valid.mbtiles.carmen2.info.json'),
+    'mbtiles-metadata_maxzoom_beyond_tiles_but_fillzoom': require('./valid.mbtiles-metadata_maxzoom_beyond_tiles_but_fillzoom.info.json'),
     'mbtiles-onlygrids': require('./valid.mbtiles.onlygrids.info.json'),
     'mbtiles-onlytiles': require('./valid.mbtiles.onlytiles.info.json'),
     'mbtiles-tilesgrids': require('./valid.mbtiles.tilesgrid.info.json'),
     'mbtiles-update1': require('./valid.mbtiles.update1.info.json'),
     'mbtiles-update2': require('./valid.mbtiles.update2.info.json'),
-    'mbtiles-vector': require('./valid.mbtiles.vector.info.json'),
     'mbtiles-vectorgzip': require('./valid.mbtiles.vectorgzip.info.json'),
     'mbtiles-webp': require('./valid.mbtiles.webp.info.json'),
     'mbtiles-tilestats': require('./valid.mbtiles.tilestats.info.json')
