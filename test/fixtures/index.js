@@ -15,12 +15,12 @@ module.exports = {
     'serialtiles_pbf': path.join(__dirname, 'valid.serialtiles.pbf.gz'),
     'serialtiles_png': path.join(__dirname, 'valid.serialtiles.png.gz'),
     'mbtiles-carmen2': path.join(__dirname, 'valid-carmen2.mbtiles'),
+    'mbtiles-metadata_maxzoom_beyond_tiles_but_fillzoom': path.join(__dirname, 'valid.vector-metadata-maxzoom-beyond-tiles-but-fillzoom.mbtiles'),
     'mbtiles-onlygrids': path.join(__dirname, 'valid-onlygrids.mbtiles'),
     'mbtiles-onlytiles': path.join(__dirname, 'valid-onlytiles.mbtiles'),
     'mbtiles-tilesgrids': path.join(__dirname, 'valid-tilesgrid.mbtiles'),
     'mbtiles-update1': path.join(__dirname, 'valid-update1.mbtiles'),
     'mbtiles-update2': path.join(__dirname, 'valid-update2.mbtiles'),
-    'mbtiles-vector': path.join(__dirname, 'valid-vector.mbtiles'),
     'mbtiles-vectorgzip': path.join(__dirname, 'valid-vectorgzip.mbtiles'),
     'mbtiles-webp': path.join(__dirname, 'valid-webp.mbtiles'),
     'mbtiles-tilestats': path.join(__dirname, 'valid-tilestats-metadata.mbtiles')
@@ -57,6 +57,10 @@ module.exports = {
       'kmllayers': path.join(__dirname, 'invalid.omnivore.toomanylayers.kml')
     },
     'mbtiles': {
+      'metadata_maxzoom_beyond_tiles': path.join(__dirname, 'invalid.vector-metadata-maxzoom-beyond-tiles.mbtiles'),
+      'metadata_maxzoom_below_tiles': path.join(__dirname, 'invalid.vector-metadata-maxzoom-below-tiles.mbtiles'),
+      'metadata_fillzoom_beyond_tiles': path.join(__dirname, 'invalid.vector-metadata-fillzoom-beyond-tiles.mbtiles'),
+      'metadata_fillzoom_below_tiles': path.join(__dirname, 'invalid.vector-metadata-fillzoom-below-tiles.mbtiles'),
       'oldtemplate': path.join(__dirname, 'invalid.mbtiles-template.mbtiles'),
       'notadb': path.join(__dirname, 'invalid.mbtiles-notadb.mbtiles'),
       'notiledata': path.join(__dirname, 'invalid.mbtiles-notiledata.mbtiles'),

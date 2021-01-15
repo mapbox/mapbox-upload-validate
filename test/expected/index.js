@@ -12,12 +12,12 @@ module.exports = {
     'serialtiles_png': require('./valid.serialtiles_png.info.json'),
     'serialtiles_pbf': require('./valid.serialtiles_pbf.info.json'),
     'mbtiles-carmen2': require('./valid.mbtiles.carmen2.info.json'),
+    'mbtiles-metadata_maxzoom_beyond_tiles_but_fillzoom': require('./valid.mbtiles-metadata_maxzoom_beyond_tiles_but_fillzoom.info.json'),
     'mbtiles-onlygrids': require('./valid.mbtiles.onlygrids.info.json'),
     'mbtiles-onlytiles': require('./valid.mbtiles.onlytiles.info.json'),
     'mbtiles-tilesgrids': require('./valid.mbtiles.tilesgrid.info.json'),
     'mbtiles-update1': require('./valid.mbtiles.update1.info.json'),
     'mbtiles-update2': require('./valid.mbtiles.update2.info.json'),
-    'mbtiles-vector': require('./valid.mbtiles.vector.info.json'),
     'mbtiles-vectorgzip': require('./valid.mbtiles.vectorgzip.info.json'),
     'mbtiles-webp': require('./valid.mbtiles.webp.info.json'),
     'mbtiles-tilestats': require('./valid.mbtiles.tilestats.info.json')
@@ -64,6 +64,10 @@ module.exports = {
     'kmllayers': '16 layers found. Maximum of 15 layers allowed.'
   },
   mbtilesErrors: {
+    'metadata_maxzoom_beyond_tiles': 'In mbtiles file, metadata.maxzoom (4) is higher than actual tiles maxzoom (2)',
+    'metadata_maxzoom_below_tiles': 'In mbtiles file, metadata.maxzoom (0) is lower than actual tiles minzoom (1)',
+    'metadata_fillzoom_beyond_tiles': 'In mbtiles file, metadata.fillzoom (3) is higher than actual tiles maxzoom (2)',
+    'metadata_fillzoom_below_tiles': 'In mbtiles file, metadata.fillzoom (0) is lower than actual tiles minzoom (1)',
     'oldtemplate': 'Use TileMill 0.7 or later to export MBTiles with a valid template.',
     'notadb': 'Unknown filetype',
     'notiledata': 'SQLITE_ERROR: no such column: tile_data',
