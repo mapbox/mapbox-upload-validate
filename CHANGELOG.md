@@ -1,3 +1,7 @@
+## 4.7.0
+
+* Require mbtiles metadata maxzoom to match the tiles table maxzoom
+
 ## 4.6.0
 
 * Added validation for a maximum possible zoom level in mbtiles

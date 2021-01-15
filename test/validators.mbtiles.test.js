@@ -142,3 +142,38 @@ test('lib.validators.mbtiles: grid maxzoom too big', function(t) {
   });
 });
 
+test('lib.validators.mbtiles: metadata maxzoom beyond tiles', function(t) {
+  validate(fixtures.invalid.mbtiles.metadata_maxzoom_beyond_tiles, function(err) {
+    t.ok(err, 'expected error');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    t.equal(err.message, expected.mbtilesErrors.metadata_maxzoom_beyond_tiles, 'expected error message');
+    t.end();
+  });
+});
+
+test('lib.validators.mbtiles: metadata maxzoom below tiles', function(t) {
+  validate(fixtures.invalid.mbtiles.metadata_maxzoom_below_tiles, function(err) {
+    t.ok(err, 'expected error');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    t.equal(err.message, expected.mbtilesErrors.metadata_maxzoom_below_tiles, 'expected error message');
+    t.end();
+  });
+});
+
+test('lib.validators.mbtiles: metadata fillzoom beyond tiles', function(t) {
+  validate(fixtures.invalid.mbtiles.metadata_fillzoom_beyond_tiles, function(err) {
+    t.ok(err, 'expected error');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    t.equal(err.message, expected.mbtilesErrors.metadata_fillzoom_beyond_tiles, 'expected error message');
+    t.end();
+  });
+});
+
+test('lib.validators.mbtiles: metadata fillzoom below tiles', function(t) {
+  validate(fixtures.invalid.mbtiles.metadata_fillzoom_below_tiles, function(err) {
+    t.ok(err, 'expected error');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    t.equal(err.message, expected.mbtilesErrors.metadata_fillzoom_below_tiles, 'expected error message');
+    t.end();
+  });
+});

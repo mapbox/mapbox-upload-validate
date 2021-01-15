@@ -1,31 +1,23 @@
 {
   "scheme": "tms",
-  "basename": "valid-vector.mbtiles",
-  "id": "valid-vector",
+  "basename": "valid.vector-metadata-maxzoom-beyond-tiles-but-fillzoom.mbtiles",
+  "id": "valid.vector-metadata-maxzoom-beyond-tiles-but-fillzoom",
   "filesize": 325632,
-  "center": [
-    -80.947266,
-    43.58039,
-    4
-  ],
+  "center": [ -80.947266, 43.58039, 4 ],
   "description": "Unpacker test fixture",
   "maxzoom": 4,
   "minzoom": 0,
   "name": "test-fixture",
   "vector_layers": [
-    {
+     {
       "id": "data",
       "description": "",
       "minzoom": 0,
       "maxzoom": 22
     }
   ],
-  "bounds": [
-    -180,
-    -85.051129,
-    180,
-    85.051128
-  ],
+  "fillzoom": "2",
+  "bounds": [ -180, -85.051129, 180, 85.051128 ],
   "version": "1.0.0",
   "legend": null
 }
