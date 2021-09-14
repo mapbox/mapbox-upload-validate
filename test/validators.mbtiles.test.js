@@ -177,3 +177,12 @@ test('lib.validators.mbtiles: metadata fillzoom below tiles', function(t) {
     t.end();
   });
 });
+
+test('lib.validators.mbtiles: duplicate layers not allowed', function(t) {
+  validate(fixtures.invalid.mbtiles.duplicate_layers, function(err) {
+    t.ok(err, 'expected error');
+    t.equal(err.code, 'EINVALID', 'expected error code');
+    t.equal(err.message, expected.mbtilesErrors.duplicate_layers, 'expected error message');
+    t.end();
+  });
+});
