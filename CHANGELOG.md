@@ -1,3 +1,7 @@
+## 4.8.0
+
+* Reject MBTiles with duplicate `id` fields in the json vector_layers metadata array [#104](https://github.com/mapbox/mapbox-upload-validate/pull/104)
+
 ## 4.7.0
 
 * Require mbtiles metadata maxzoom to match the tiles table maxzoom

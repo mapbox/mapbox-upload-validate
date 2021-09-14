@@ -69,7 +69,8 @@ module.exports = {
       'empty': path.join(__dirname, 'invalid.mbtiles-empty.mbtiles'),
       'limits': path.join(__dirname, 'invalid.mbtiles-limits.mbtiles'),
       'nulltile': path.join(__dirname, 'invalid.mbtiles-null-tile.mbtiles'),
-      'prepare': path.join(__dirname, 'invalid.mbtiles-prepare.mbtiles')
+      'prepare': path.join(__dirname, 'invalid.mbtiles-prepare.mbtiles'),
+      'duplicate_layers': path.join(__dirname, 'invalid.mbtiles-duplicate-layers.mbtiles')
     }
   }
 };
