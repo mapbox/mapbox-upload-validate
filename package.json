@@ -6,7 +6,7 @@
   "scripts": {
     "pretest": "jshint bin lib test",
     "test": "node pretest.js && eslint index.js lib && tape test/*.test.js",
-    "coverage": "istanbul cover tape test/*.js && coveralls < ./coverage/lcov.info"
+    "coverage": "istanbul cover tape test/*.js"
   },
   "bin": {
     "mapbox-upload-validate": "bin/mapbox-upload-validate.js"
