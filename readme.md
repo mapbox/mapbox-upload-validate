@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.com/mapbox/mapbox-upload-validate.svg?branch=master)](https://travis-ci.com/mapbox/mapbox-upload-validate)
-[![Coverage Status](https://coveralls.io/repos/mapbox/mapbox-upload-validate/badge.svg?branch=master&service=github)](https://coveralls.io/github/mapbox/mapbox-upload-validate?branch=master)
+⚠️ This repository is no longer actively maintained by Mapbox.
 
 # mapbox-upload-validate
 
